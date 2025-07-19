@@ -10,6 +10,66 @@ html, body {
     background: linear-gradient(#272727, #a70505);
 }
 
+#logoPrincipal {
+  width: 300px;
+  opacity: 0;
+  transform: scale(0.8);
+  filter: drop-shadow(0 0 0px #ffe100);
+  animation: entradaLogo 2s ease-out forwards,
+             respirar 1.2s 2s ease-in-out 3 alternate forwards,
+             zoomFinal 0.8s 4.5s forwards;
+  margin: 0 auto;
+  display: block;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform-origin: center center;
+  transform: translate(-50%, -50%) scale(0.8);
+  z-index: 10;
+}
+
+#logoPrincipal:hover {
+    transform: scale(1.05);
+    filter: drop-shadow(0 0 10px #ffcc00);
+    transition: transform 0.3s, filter 0.3s;
+    cursor: pointer;
+}
+
+@keyframes entradaLogo {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.8);
+    filter: drop-shadow(0 0 0px transparent);
+  }
+  70% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.05);
+    filter: drop-shadow(0 0 10px #ffe100);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    filter: drop-shadow(0 0 5px #ffd700);
+  }
+}
+
+@keyframes respirar {
+  0%, 100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+}
+
+@keyframes zoomFinal {
+  to {
+    transform: translate(-50%, -50%) scale(2);
+    opacity: 1;
+    filter: drop-shadow(0 0 15px #ffd700);
+    z-index: 9999;
+  }
+}
+
 .navbar {
     position: relative;
     display: flex;
