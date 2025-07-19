@@ -79,28 +79,33 @@ html, body {
     z-index: 2;
 }
 
+.menu-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
 #navOptions {
     list-style: none;
     margin: 0;
-    padding: 1rem;
     background: linear-gradient(to bottom, #f4e4c1, #e0cfa9, #f4e4c1);
     border: 2px solid #5b3e1d;
     color: #2c1c0c;
     font-family: 'Georgia', serif;
     transition: background 0.3s;
     position: absolute;
-    top: 90%;
-    left: 84%;
-    right: 0;
+    top: 0;
+    right: calc(100% + 10px);
     width: 170px;
-    margin-top: 5px;
     padding-top: 13px;
+    padding-left: 0;
+    padding-right: 0;
     border-radius: 8px;
     opacity: 0;
-    transform: translateY(-10px);
+    transform: translateX(10px);
     pointer-events: none;
     transition: opacity 0.5s ease, transform 0.5s ease;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    z-index: 999;
 }
 
 #navOptions.show {
@@ -111,6 +116,7 @@ html, body {
 
 #navOptions li {
     padding: 10px;
+    text-align: left;
 }
 
 #navOptions li a {
@@ -178,11 +184,14 @@ header {
 .submenu {
   position: absolute;
   top: 0;
-  right: 100%; /* o right: 100% si querés que se abra hacia la izquierda */
-  background: linear-gradient(135deg, rgb(12, 11, 11), #62ff6f);
+  right: 100%;
+  left: auto;
+  background: linear-gradient(to bottom, #f4e4c1, #e0cfa9, #f4e4c1);
+    border: 2px solid #5b3e1d;
+    color: #2c1c0c;
   border-radius: 8px;
   white-space: nowrap;
-  z-index: 1;
+  z-index: 1000;
   opacity: 0;
   transform: translateX(10px);
   pointer-events: none;
@@ -190,6 +199,23 @@ header {
   list-style: none;
   padding-left: 0;
   margin-left: 0; 
+}
+
+.has-submenu.below > .submenu {
+  top: 100%;
+  left: 0;
+  right: auto;
+  transform: translateY(10px);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.has-submenu.below:hover > .submenu,
+.has-submenu.below:focus-within > .submenu {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
 }
 
 .submenu li {
@@ -212,6 +238,11 @@ header {
   text-decoration: none;
   font-size: 1.2em;
   font-weight: bold;
+  width: 100%;
+}
+
+.has-submenu:hover .submenu {
+  display: block;
 }
 
 /* Hover y foco en los enlaces del submenú */

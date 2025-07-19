@@ -11,6 +11,8 @@
     </head>
     <body>
         <nav class="navbar">
+            <div class="menu-wrapper">
+                <div class="menu-icon">
             <button id="menuBtn">☰</button>
             <ul id="navOptions" class="menu.transition">
                 <button id="closeMenu">✖</button>
@@ -26,9 +28,24 @@
                         <li><img src="iconoPipi.png" alt="Pipi" class="pfp-img"><a href="pipi.html">Pipi</a></li>
                     </ul>
                 </li>
-                <li><a href="#fondos">Fondos</a></li>
-                <li><a href="#mapas">Mapas</a></li>
-            </ul>
+                <li class="has-submenu">
+                    <a href="#fondos">Fondos</a>
+                    <ul class="submenu">
+                        <li><a href="#paisajes">Paisajes</a></li>
+                        <li><a href="#pueblos">Pueblos</a></li>
+                        <li><a href="#interiores">Interiores</a></li>
+                    </ul>
+                </li>
+                <li class="has-submenu">
+                    <a href="#mapas">Mapas</a>
+                    <ul class="submenu">
+                        <li><a href="#Islas">Islas</a></li>
+                        <li><a href="#Mapa mundial">Mapa mundial</a></li>
+                        <li><a href="#Mapas del tesoro">Mapas del tesoro</a></li>
+                    </ul>
+                </li>
+                </ul>
+            </div>
         </nav>
 
         <header>
