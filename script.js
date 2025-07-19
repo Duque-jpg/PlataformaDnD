@@ -25,3 +25,10 @@ const boton = document.getElementById("musicToggle");
     }
     reproduciendo = !reproduciendo;
   });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const header = document.querySelector('.header-img-container');
+  if(header) {
+    header.style.opacity = '1'; // para que no se quede invisible en navegadores lentos
+  }
+});
