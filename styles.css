@@ -7,7 +7,7 @@ html, body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(#272727, #a70505);
+    background: linear-gradient(to bottom, #111 0%, #222 50%, #111 100%);
 }
 
 #logoPrincipal {
@@ -82,12 +82,15 @@ html, body {
 #navOptions {
     list-style: none;
     margin: 0;
-    padding: 0;
-    background: linear-gradient(antiquewhite, #ffadad);
+    padding: 1rem;
+    background: linear-gradient(to bottom, #f4e4c1, #e0cfa9, #f4e4c1);
+    border: 2px solid #5b3e1d;
+    color: #2c1c0c;
+    font-family: 'Georgia', serif;
     transition: background 0.3s;
     position: absolute;
     top: 90%;
-    left: 86%;
+    left: 84%;
     right: 0;
     width: 170px;
     margin-top: 5px;
@@ -97,6 +100,7 @@ html, body {
     transform: translateY(-10px);
     pointer-events: none;
     transition: opacity 0.5s ease, transform 0.5s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 }
 
 #navOptions.show {
@@ -110,9 +114,9 @@ html, body {
 }
 
 #navOptions li a {
-    color: #000000;
+    color: #2c1c0c;
     font-size: 1.3em;
-    font-family: 'Montserrat', Arial, sans-serif;
+    font-family: 'Georgia', serif;
     text-decoration: none;
     font-weight: bold;
     letter-spacing: 1px;
@@ -213,6 +217,7 @@ header {
 /* Hover y foco en los enlaces del submenú */
 .submenu li a:hover,
 .submenu li a:focus {
+  width: 100%;
   background: #a70505;
 }
 
