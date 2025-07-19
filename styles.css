@@ -1,0 +1,72 @@
+html, body {
+    height: 100%;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(#272727, #a70505);
+}
+
+.navbar {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding: 10px;
+    z-index: 2;
+}
+
+#navOptions {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background: #eee;
+    border: 1px solid #ccc;
+    position: absolute;
+    top: 100%;
+    left: auto;
+    right: 0;
+    width: 150px;
+    margin-top: 5px;
+}
+
+.hidden {
+    display: none;
+}
+
+#navOptions li {
+    padding: 10px;
+}
+
+#navOptions li a {
+    text-decoration: none;
+    color: #333;
+}
+
+#menuBtn {
+    position: relative;
+    z-index: 3;
+    font-size: 2.5em;
+    background: #a70505;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+#menuBtn:hover {
+    background: #272727;
+}
+
+header img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+header {
+    max-width: 900px; /* O el valor que prefieras */
+    margin: 0 auto;
+}
