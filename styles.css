@@ -115,7 +115,7 @@ header {
   position: absolute;
   top: 0;
   right: 100%; /* o right: 100% si querés que se abra hacia la izquierda */
-  background: rgba(20, 20, 30, 0.97);
+  background: linear-gradient(#272727, #a70505);
   border-radius: 8px;
   white-space: nowrap;
   z-index: 1;
