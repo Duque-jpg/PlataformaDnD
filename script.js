@@ -9,3 +9,19 @@ menuBtn.addEventListener('click', () => {
 closeMenu.addEventListener('click', () => {
     navOptions.classList.remove('show');
 });
+
+const boton = document.getElementById("musicToggle");
+  const musica = document.getElementById("introMusic");
+
+  let reproduciendo = false;
+
+  boton.addEventListener("click", () => {
+    if (reproduciendo) {
+      musica.pause();
+      boton.textContent = "🔇";
+    } else {
+      musica.play();
+      boton.textContent = "🔊";
+    }
+    reproduciendo = !reproduciendo;
+  });

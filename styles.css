@@ -247,3 +247,28 @@ header {
 .submenu li:hover .pfp-img {
   transform: scale(1.1);
 }
+
+#musicControls {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 10px 20px;
+  border-radius: 40px;
+  z-index: 999;
+}
+
+#musicControls img {
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+#musicControls img:hover {
+  transform: scale(1.2);
+}
