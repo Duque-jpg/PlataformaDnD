@@ -3,15 +3,16 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Nacho D Castro</title>
+        <title>One Pipis</title>
         <link rel="icon" type="image/png" sizes="32x32" href="logo OP dnd.png">
         <link rel="icon" type="image/png" sizes="64x64" href="logo OP dnd.png">
         <link rel="icon" type="image/png" sizes="128x128" href="logo OP dnd.png">
         <link rel="stylesheet" href="styles.css">
     </head>
-
     <body>
         <nav class="navbar">
+            <div class="menu-wrapper">
+                <div class="menu-icon">
             <button id="menuBtn">☰</button>
             <ul id="navOptions" class="menu.transition">
                 <button id="closeMenu">✖</button>
@@ -27,10 +28,34 @@
                         <li><img src="iconoPipi.png" alt="Pipi" class="pfp-img"><a href="pipi.html">Pipi</a></li>
                     </ul>
                 </li>
-                <li><a href="#fondos">Fondos</a></li>
-                <li><a href="#mapas">Mapas</a></li>
-            </ul>
+                <li class="has-submenu">
+                    <a href="#fondos">Fondos</a>
+                    <ul class="submenu">
+                        <li><a href="#paisajes">Paisajes</a></li>
+                        <li><a href="#pueblos">Pueblos</a></li>
+                        <li><a href="#interiores">Interiores</a></li>
+                    </ul>
+                </li>
+                <li class="has-submenu">
+                    <a href="#mapas">Mapas</a>
+                    <ul class="submenu">
+                        <li><a href="#Islas">Islas</a></li>
+                        <li><a href="#Mapa mundial">Mapa mundial</a></li>
+                        <li><a href="#Mapas del tesoro">Mapas del tesoro</a></li>
+                    </ul>
+                </li>
+                </ul>
+            </div>
         </nav>
+        <div id="musicControls">
+            <img src="PrevB.png" alt="Anterior" id="prevBtn">
+            <img src="PlayB.png" alt="Reproducir" id="playBtn">
+            <img src="PauseB.png" alt="Pausa" id="pauseBtn" style="display:none;">
+            <img src="NextB.png" alt="Siguiente" id="nextBtn">
+            <img src="RepeatB.png" alt="Repetir" id="repeatBtn">
+            <audio id="introMusic" loop></audio>
+        </div>
+        <script src="music.js"></script>
         <script src="script.js"></script>
     </body>
 </html>
