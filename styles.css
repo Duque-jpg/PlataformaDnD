@@ -180,7 +180,7 @@ header {
   border-radius: 5px;
   object-fit: cover;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-  border: 2px solid #fff;
+  border: 2px solid #312828;
   transition: transform 0.2s ease;
 }
 
