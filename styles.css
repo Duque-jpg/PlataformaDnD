@@ -33,10 +33,16 @@ html, body {
     margin-top: 5px;
     padding-top: 13px;
     border-radius: 8px;
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
+    transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
-.hidden {
-    display: none;
+#navOptions.show {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
 }
 
 #navOptions li {
@@ -106,15 +112,17 @@ header {
 }
 
 .submenu {
-  list-style: none;
-  margin: 0;
-  padding: 0;
   position: absolute;
-  top: 0;                /* alineado con “Personajes” */
-  right: 20%;            /* justo a la derecha */
-  display: none;         /* oculto */
+  top: 0;
+  right: 100%; /* o right: 100% si querés que se abra hacia la izquierda */
   background: rgba(20, 20, 30, 0.97);
   border-radius: 8px;
+  white-space: nowrap;
+  z-index: 1;
+  opacity: 0;
+  transform: translateX(10px);
+  pointer-events: none;
+  transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
 .submenu li a {
@@ -135,11 +143,17 @@ header {
 /* Al posar el ratón sobre el li padre, mostramos el submenú */
 .has-submenu:hover .submenu,
 .has-submenu:focus-within .submenu {
-  display: block;
+  opacity: 1;
+  transform: translateX(0);
+  pointer-events: auto;
 }
 
 /* Para que “Personajes ▾” cambie al pasar el hover */
 .has-submenu > a:hover,
 .has-submenu > a:focus {
   background: #a70505;
+}
+
+.has-submenu {
+  position: relative;
 }
