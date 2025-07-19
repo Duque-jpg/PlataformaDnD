@@ -128,6 +128,13 @@ header {
   margin-left: 0; 
 }
 
+.submenu li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 10px
+}
+
 .submenu li a {
   display: block;
   padding: 10px 20px;
@@ -162,9 +169,7 @@ header {
 }
 
 .perfil-img {
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  vertical-align: middle;
-  margin-right: 10px;
+  width: 28px;
+  height: 28px;
+  object-fit: cover;
 }
