@@ -123,6 +123,9 @@ header {
   transform: translateX(10px);
   pointer-events: none;
   transition: opacity 0.5s ease, transform 0.5s ease;
+  list-style: none;
+  padding-left: 0;
+  margin-left: 0; 
 }
 
 .submenu li a {
@@ -156,4 +159,12 @@ header {
 
 .has-submenu {
   position: relative;
+}
+
+.perfil-img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  vertical-align: middle;
+  margin-right: 10px;
 }
