@@ -100,9 +100,9 @@ html, body {
     padding-right: 0;
     border-radius: 8px;
     opacity: 0;
-    transform: translateX(10px);
+    transform: translateY(15px);
     pointer-events: none;
-    transition: opacity 0.5s ease, transform 0.5s ease;
+    transition: opacity 0.4s ease, transform 0.4s ease;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
     z-index: 999;
 }
@@ -149,6 +149,13 @@ html, body {
     transition: background 0.2s;
 }
 
+#menuBtn:hover,
+#closeMenu:hover,
+#musicControls img:hover {
+  transform: scale(1.15);
+  transition: transform 0.3s ease;
+}
+
 #menuBtn:hover {
     background: #272727;
 }
@@ -190,9 +197,9 @@ header {
   white-space: nowrap;
   z-index: 1000;
   opacity: 0;
-  transform: translateX(10px);
+  transform: translateX(15px);
   pointer-events: none;
-  transition: opacity 0.5s ease, transform 0.5s ease;
+  transition: opacity 0.4s ease, transform 0.4s ease;
   list-style: none;
   padding-left: 0;
   margin-left: 0; 
@@ -211,7 +218,7 @@ header {
 .has-submenu.below:hover > .submenu,
 .has-submenu.below:focus-within > .submenu {
   opacity: 1;
-  transform: translateY(0);
+  transform: translateX(0);
   pointer-events: auto;
 }
 
@@ -362,17 +369,42 @@ body::before {
   z-index: 3;
   max-width: 1000px;
   margin: 0 auto; /* centrado del contenedor */
+  animation: fadeSlideUp 1s ease forwards;
+  opacity: 0; /* se pone 0 para que la animación se note */
 }
 
 .titulo-maximo {
-  height: 100px;
+  height: 300px;
   width: auto;
-  filter: drop-shadow(0 0 8px #00aaff);
+  filter: drop-shadow(0 0 12px #00aaff);
+  transform: translateX(-30px); /* mueve hacia la izquierda */
+  transition: transform 0.3s ease, filter 0.3s ease;
 }
 
 .perfil-maximo {
-  width: 180px;
+  width: 380px;
   height: auto;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+  transform: translateX(30px); /* mueve hacia la derecha */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.titulo-maximo:hover,
+.perfil-maximo:hover {
+  filter: drop-shadow(0 0 15px #00d8ff);
+  transform: scale(1.05);
+  transition: transform 0.3s ease, filter 0.3s ease;
+  cursor: pointer;
 }
