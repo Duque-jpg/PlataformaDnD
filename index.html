@@ -4,9 +4,9 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>One Pipis</title>
-        <link rel="icon" type="image/png" sizes="32x32" href="logo OP dnd.png">
-        <link rel="icon" type="image/png" sizes="64x64" href="logo OP dnd.png">
-        <link rel="icon" type="image/png" sizes="128x128" href="logo OP dnd.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="img\logo OP dnd.png">
+        <link rel="icon" type="image/png" sizes="64x64" href="img\logo OP dnd.png">
+        <link rel="icon" type="image/png" sizes="128x128" href="img\logo OP dnd.png">
         <link rel="stylesheet" href="styles.css">
     </head>
     <body>
@@ -20,12 +20,12 @@
                 <li class="has-submenu">
                     <a href="#personajes">Personajes</a>
                     <ul class="submenu">
-                        <li><img src="iconoFury.png" alt="Nacho D Castro" class="pfp-img"><a href="nachodcastro.html">Nacho D Castro</a></li>
-                        <li><img src="iconoMauri.png" alt="Gerónimo Splinter" class="pfp-img"><a href="geronimosplinter.html">Gerónimo Splinter</a></li>
-                        <li><img src="iconoAgus.png" alt="Caelis Skybrand" class="pfp-img"><a href="caelisskybrand.html">Caelis Skybrand</a></li>
-                        <li><img src="iconoAndy.png" alt="Arthur Kane" class="pfp-img"><a href="arthurkane.html">Arthur Kane</a></li>
-                        <li><img src="iconoEmi.png" alt="Máximo Duque" class="pfp-img"><a href="maximoduque.html">Máximo Duque</a></li>
-                        <li><img src="iconoPipi.png" alt="Pipi" class="pfp-img"><a href="pipi.html">Pipi</a></li>
+                        <li><img src="img\iconoFury.png" alt="Nacho D Castro" class="pfp-img"><a href="nachodcastro.html">Nacho D Castro</a></li>
+                        <li><img src="img\iconoMauri.png" alt="Gerónimo Splinter" class="pfp-img"><a href="geronimosplinter.html">Gerónimo Splinter</a></li>
+                        <li><img src="img\iconoAgus.png" alt="Caelis Skybrand" class="pfp-img"><a href="caelisskybrand.html">Caelis Skybrand</a></li>
+                        <li><img src="img\iconoAndy.png" alt="Arthur Kane" class="pfp-img"><a href="arthurkane.html">Arthur Kane</a></li>
+                        <li><img src="img\iconoEmi.png" alt="Máximo Duque" class="pfp-img"><a href="maximoduque.html">Máximo Duque</a></li>
+                        <li><img src="img\iconoPipi.png" alt="Pipi" class="pfp-img"><a href="pipi.html">Pipi</a></li>
                     </ul>
                 </li>
                 <li class="has-submenu">
@@ -48,14 +48,19 @@
             </div>
         </nav>
         
-        <img src="Logo definitivo.png" alt="Logo" id="logoPrincipal">
-        
+        <img src="img\Logo definitivo.png" alt="Logo" id="logoPrincipal">
+
         <div id="musicControls">
-            <img src="PrevB.png" alt="Anterior" id="prevBtn">
-            <img src="PlayB.png" alt="Reproducir" id="playBtn">
-            <img src="PauseB.png" alt="Pausa" id="pauseBtn" style="display:none;">
-            <img src="NextB.png" alt="Siguiente" id="nextBtn">
-            <img src="RepeatB.png" alt="Repetir" id="repeatBtn">
+            <select id="playlistSelect" title="Seleccionar canción">
+                <option value="music/ostintro.mp3">Intro Record Keeper</option>
+                <option value="music/ostfa.mp3">Música de pelea 1</option>
+                <option value="music/ostvvs.mp3">Música de pelea 2</option>
+            </select>
+                <img src="img\PrevB.png" alt="Anterior" id="prevBtn">
+                <img src="img\PlayB.png" alt="Reproducir" id="playBtn">
+                <img src="img\PauseB.png" alt="Pausa" id="pauseBtn" style="display:none;">
+                <img src="img\NextB.png" alt="Siguiente" id="nextBtn">
+                <img src="img\RepeatB.png" alt="Repetir" id="repeatBtn">
             <audio id="introMusic" loop></audio>
         </div>
         <script src="music.js"></script>

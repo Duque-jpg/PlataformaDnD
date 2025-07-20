@@ -6,10 +6,21 @@ document.addEventListener("DOMContentLoaded", () => {
   const repeatBtn = document.getElementById("repeatBtn");
   const audio = document.getElementById("introMusic");
 
+  const playlistSelect = document.getElementById('playlistSelect');
+
+  playlistSelect.addEventListener('change', () => {
+    currentIndex = playlistSelect.selectedIndex;
+    loadAndPlay(currentIndex);
+  });
+
   const playlist = [
-    "ostfa.mp3",
-    "ostov.mp3",
-    "musica/tema3.mp3"
+    "music/ostintro.mp3",
+    "music/ostfight1.mp3",
+    "music/ostfight2.mp3",
+    "music/ostfight3.mp3",
+    "music/ostfight4.mp3",
+    "music/ostfight5.mp3",
+    "music/ostfight6.mp3",
   ];
   let currentIndex = 0;
   let isRepeating = false;
@@ -21,10 +32,12 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function loadAndPlay(index) {
-    audio.src = playlist[index];
-    audio.play();
-    updateButtons();
-  }
+  audio.src = playlist[index];
+  audio.play();
+  playlistSelect.selectedIndex = index; // sincroniza la lista
+  updateButtons();
+}
+
 
   playBtn.addEventListener("click", () => {
   loadAndPlay(currentIndex);
