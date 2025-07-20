@@ -57,7 +57,4 @@ document.addEventListener("DOMContentLoaded", () => {
       loadAndPlay(currentIndex);
     }
   });
-
-  // Inicialización después de cargar
-  loadAndPlay(currentIndex);
 });
