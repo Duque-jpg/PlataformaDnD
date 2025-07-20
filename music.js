@@ -21,7 +21,72 @@ document.addEventListener("DOMContentLoaded", () => {
     "music/ostfight4.mp3",
     "music/ostfight5.mp3",
     "music/ostfight6.mp3",
+    "music/ostfight7.mp3",
+    "music/ostfight8.mp3",
+    "music/ostfight9.mp3",
+    "music/ostfight10.mp3",
+    "music/ostboss.mp3",
+    "music/ostboss2.mp3",
+    "music/osttension1.mp3",
+    "music/osttension2.mp3",
+    "music/osttension3.mp3",
+    "music/ostmarina.mp3",
+    "music/ostescape.mp3",
+    "music/ostconfuso.mp3",
+    "music/ostisladestruida.mp3",
+    "music/osttriste.mp3",
+    "music/ostpueblo1.mp3",
+    "music/ostpueblo2.mp3",
+    "music/ostpueblo3.mp3",
+    "music/ostpueblo4.mp3",
+    "music/ostpueblo5.mp3",
+    "music/ostpueblo6.mp3",
+    "music/ostisladespedida.mp3",
+    "music/osttienda.mp3",
+    "music/ostvictoria.mp3",
+    "music/ostnav1.mp3",
+    "music/ostnav2.mp3",
+    "music/ostnav3.mp3",
+    "music/ostnav4.mp3"
   ];
+
+  // <option value="">Intro Record Keeper</option>
+// <option value="">Música de pelea 1</option>
+// <option value="">Música de pelea 2</option>
+// <option value="">Música de pelea 3</option>
+// <option value="">Música de pelea 4</option>
+// <option value="">Música de pelea 5</option>
+// <option value="">Música de pelea 6</option>
+// <option value="">Música de pelea 7</option>
+// <option value="">Música de pelea 8</option>
+// <option value="">Música de pelea 9</option>
+// <option value="">Música de pelea 10</option>
+// <option value="">Música de Boss</option>
+// <option value="">Música de Boss 2</option>
+// <option value="">Música de tensión 1</option>
+// <option value="">Música de tensión 2</option>
+// <option value="">Música de tensión 3</option>
+// <option value="">Apareció la Marina!</option>
+// <option value="">Escape</option>
+// <option value="">Confuso</option>
+// <option value="">Isla destuida</option>
+// <option value="">Tristeza</option>
+// <option value="">Pueblo 1</option>
+// <option value="">Pueblo 2</option>
+// <option value="">Pueblo 3</option>
+// <option value="">Pueblo 4</option>
+// <option value="">Pueblo 5</option>
+// <option value="">Pueblo 6</option>
+// <option value="">Despidiendo la Isla</option>
+// <option value="">Tienda</option>
+// <option value="">Victoria</option>
+// <option value="">Navegando 1</option>
+// <option value="">Navegando 2</option>
+// <option value="">Navegando 3</option>
+// <option value="">Navegando 4</option>
+
+
+
   let currentIndex = 0;
   let isRepeating = false;
 
