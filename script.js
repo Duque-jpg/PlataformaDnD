@@ -10,25 +10,16 @@ closeMenu.addEventListener('click', () => {
     navOptions.classList.remove('show');
 });
 
-const boton = document.getElementById("musicToggle");
-  const musica = document.getElementById("introMusic");
+const imagenPerfil = document.getElementById("imagenPerfil");
+const bioPanel = document.querySelector(".bio-panel");
 
-  let reproduciendo = false;
+imagenPerfil.addEventListener("click", () => {
+  bioPanel.classList.toggle("active");
+});
 
-  boton.addEventListener("click", () => {
-    if (reproduciendo) {
-      musica.pause();
-      boton.textContent = "🔇";
-    } else {
-      musica.play();
-      boton.textContent = "🔊";
-    }
-    reproduciendo = !reproduciendo;
-  });
+const btn = document.getElementById('btnDesplegar');
+const texto = document.getElementById('textoDesplegado');
 
-document.addEventListener("DOMContentLoaded", () => {
-  const header = document.querySelector('.header-img-container');
-  if(header) {
-    header.style.opacity = '1'; // para que no se quede invisible en navegadores lentos
-  }
+btn.addEventListener('click', () => {
+  texto.classList.toggle('visible');
 });
