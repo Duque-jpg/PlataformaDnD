@@ -1,0 +1,160 @@
+/* responsive.css — mobile & tablet */
+
+/* 1. GLOBAL: asegurar que no haya overflow horizontal */
+html, body {
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+/* 2. IMÁGENES Y SVG: siempre fluidas */
+img, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* 3. ESCALA LIGERA EN MÓVIL (0–767px) */
+@media (max-width: 767px) {
+  /* Logo animado: desactiva posicionado fijo y escala */
+  #logoPrincipal {
+    position: relative !important;
+    width: 80vw !important;
+    max-width: 250px !important;
+    transform: none !important;
+    margin: 20px auto !important;
+    animation: none !important;
+  }
+
+  /* Menú off‑canvas: ocupa toda la altura y sale desde la derecha */
+  .navbar {
+    justify-content: space-between;
+  }
+  #navOptions {
+    position: fixed;
+    top: 0; right: 0;
+    width: 0;
+    height: 100vh;
+    background: #f4e4c1;
+    transition: width 0.3s ease;
+    padding-top: 60px;
+    z-index: 1000;
+  }
+  #navOptions.show {
+    width: 75vw;
+    max-width: 300px;
+  }
+  #closeMenu {
+    top: 15px; right: 15px;
+  }
+
+  /* Títulos de personaje */
+  .titulo-maximo,
+  .titulo-caelis,
+  .titulo-nacho {
+    width: 90vw;
+    max-width: 300px;
+    top: 10px;
+    height: auto;
+  }
+
+  /* Perfil + bio apilados */
+  .perfil-maximo,
+  .perfil-caelis,
+  .perfil-nacho {
+    position: static !important;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+  .bio-maximo,
+  .bio-caelis,
+  .bio-nacho {
+    width: 90vw !important;
+    max-width: 300px !important;
+    padding: 10px;
+  }
+  #maximoPerfil,
+  #caelisPerfil,
+  #nachoPerfil {
+    width: 80vw;
+    max-width: 250px;
+  }
+
+  /* Ocultar lateral toggle */
+  .contenedor-lateral {
+    display: none !important;
+  }
+
+  /* Reproductor: margen y ancho moderado */
+  #musicControls {
+    width: 95vw;
+    max-width: 350px;
+    bottom: 10px !important;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 8px;
+    gap: 8px;
+  }
+}
+
+/* 4. TABLET (768–1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* Logo ligeramente más pequeño */
+  #logoPrincipal {
+    width: 250px !important;
+    margin: 30px auto !important;
+    position: relative !important;
+    animation: none !important;
+    transform: none !important;
+  }
+
+  /* Menú original (abierto sobre contenido) */
+  #navOptions {
+    position: absolute;
+    top: 0; right: calc(100% + 10px);
+    width: 180px;
+    height: auto;
+    transform: none !important;
+    opacity: 0; pointer-events: none;
+  }
+  #navOptions.show {
+    opacity: 1; pointer-events: auto;
+    transform: translateY(0);
+  }
+
+  /* Títulos y perfiles en fila */
+  .titulo-maximo,
+  .titulo-caelis,
+  .titulo-nacho {
+    width: auto;
+    height: 250px;
+  }
+  .perfil-maximo,
+  .perfil-caelis,
+  .perfil-nacho {
+    position: absolute;
+    top: 160px;
+    right: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  #maximoPerfil,
+  #caelisPerfil,
+  #nachoPerfil {
+    width: 300px;
+  }
+
+  /* Mantenemos la barra lateral */
+  .contenedor-lateral {
+    display: flex !important;
+  }
+
+  /* Reproductor un poco más ancho */
+  #musicControls {
+    max-width: 400px;
+  }
+}
