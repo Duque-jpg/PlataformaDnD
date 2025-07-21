@@ -55,8 +55,8 @@
                         <p>Este es el texto que se muestra al desplegar.</p>
                     </div>
                 </div>
-                <div class="perfil-container">
-                    <div class="bio-panel">
+                <div class="perfil-maximo">
+                    <div class="bio-maximo">
                         <p>
                             Máximo nació en los abismos de la Isla Gyojin, hijo de una linaje de guerreros pacifistas que defendían las enseñanzas de la reina Otohime. Pero en él ardía una furia distinta: la del tiburón blanco, fiera, impulsiva, orgullosa. Fue educado para controlar su poder, pero su temperamento no tardó en chocar con las tensiones sociales entre humanos y gyojins.<br>
                             <br>Con apenas 13 años, un conflicto con un noble humano degeneró en tragedia: Máximo fue acusado falsamente y vendido como esclavo al submundo de Dressrosa. Allí fue obligado a luchar en el Coliseo Corrida, donde su fuerza y habilidades lo convirtieron en un gladiador temido e indomable. Los años de arena, cadenas y sangre lo convirtieron en leyenda. Pronto los espectadores lo bautizaron:<br>
@@ -70,18 +70,55 @@
                             <br>Máximo lo enfrentó en secreto junto con Marco, pero debido a la falta de experiencia contra piratas poderosos, fueron derrotados. Marco logró escapar con Máximo, pero en las alturas lograron derribar a este último, quien quedó varado en algún lugar del East Blue.<br>
                         </p>
                     </div>
-                    <img id="imagenPerfil" src="img\perfilMaximo.jpeg" alt="Máximo Duque">
+                    <img id="maximoPerfil" src="img\perfilMaximo.jpeg" alt="Máximo Duque">
                 </div>
             </div>
         <div id="musicControls">
-            <img src="img\PrevB.png" alt="Anterior" id="prevBtn">
-            <img src="img\PlayB.png" alt="Reproducir" id="playBtn">
-            <img src="img\PauseB.png" alt="Pausa" id="pauseBtn" style="display:none;">
-            <img src="img\NextB.png" alt="Siguiente" id="nextBtn">
-            <img src="img\RepeatB.png" alt="Repetir" id="repeatBtn">
+            <select id="playlistSelect" title="Seleccionar canción">
+                <option value="">🎬 Intro Record Keeper</option>
+                <option value="">⚔️ Música de pelea 1</option>
+                <option value="">⚔️ Música de pelea 2</option>
+                <option value="">⚔️ Música de pelea 3</option>
+                <option value="">⚔️ Música de pelea 4</option>
+                <option value="">⚔️ Música de pelea 5</option>
+                <option value="">⚔️ Música de pelea 6</option>
+                <option value="">⚔️ Música de pelea 7</option>
+                <option value="">⚔️ Música de pelea 8</option>
+                <option value="">⚔️ Música de pelea 9</option>
+                <option value="">⚔️ Música de pelea 10</option>
+                <option value="">👹 Música de Boss</option>
+                <option value="">👺 Música de Boss 2</option>
+                <option value="">😬 Música de tensión 1</option>
+                <option value="">😨 Música de tensión 2</option>
+                <option value="">⏳ Música de tensión 3</option>
+                <option value="">🚨 Apareció la Marina!</option>
+                <option value="">🏃 Escape</option>
+                <option value="">❓ Confuso</option>
+                <option value="">💥 Isla destruida</option>
+                <option value="">😢 Tristeza</option>
+                <option value="">🏘️ Pueblo 1</option>
+                <option value="">🏘️ Pueblo 2</option>
+                <option value="">🏘️ Pueblo 3</option>
+                <option value="">🏘️ Pueblo 4</option>
+                <option value="">🏘️ Pueblo 5</option>
+                <option value="">🏘️ Pueblo 6</option>
+                <option value="">👋 Despidiendo la Isla</option>
+                <option value="">🎪 Tienda</option>
+                <option value="">🏆 Victoria</option>
+                <option value="">⛵ Navegando 1</option>
+                <option value="">⛵ Navegando 2</option>
+                <option value="">⛵ Navegando 3</option>
+                <option value="">⛵ Navegando 4</option>
+            </select>
+                <img src="img\PrevB.png" alt="Anterior" id="prevBtn">
+                <img src="img\PlayB.png" alt="Reproducir" id="playBtn">
+                <img src="img\PauseB.png" alt="Pausa" id="pauseBtn" style="display:none;">
+                <img src="img\NextB.png" alt="Siguiente" id="nextBtn">
+                <img src="img\RepeatB.png" alt="Repetir" id="repeatBtn">
             <audio id="introMusic" loop></audio>
         </div>
         <script src="music.js"></script>
         <script src="script.js"></script>
+        <script src="charscript.js"></script>
     </body>
 </html>
