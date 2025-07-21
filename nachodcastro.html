@@ -4,58 +4,118 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>One Pipis</title>
-        <link rel="icon" type="image/png" sizes="32x32" href="logo OP dnd.png">
-        <link rel="icon" type="image/png" sizes="64x64" href="logo OP dnd.png">
-        <link rel="icon" type="image/png" sizes="128x128" href="logo OP dnd.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="img\logo OP dnd.png">
+        <link rel="icon" type="image/png" sizes="64x64" href="img\logo OP dnd.png">
+        <link rel="icon" type="image/png" sizes="128x128" href="img\logo OP dnd.png">
         <link rel="stylesheet" href="styles.css">
     </head>
-    <body>
+    <body class="nacho-bg">
         <nav class="navbar">
             <div class="menu-wrapper">
                 <div class="menu-icon">
-            <button id="menuBtn">☰</button>
-            <ul id="navOptions" class="menu.transition">
-                <button id="closeMenu">✖</button>
-                <li><a href="index.html">Inicio</a></li>
-                <li class="has-submenu">
-                    <a href="#personajes">Personajes</a>
-                    <ul class="submenu">
-                        <li><img src="iconoFury.png" alt="Nacho D Castro" class="pfp-img"><a href="nachodcastro.html">Nacho D Castro</a></li>
-                        <li><img src="iconoMauri.png" alt="Gerónimo Splinter" class="pfp-img"><a href="geronimosplinter.html">Gerónimo Splinter</a></li>
-                        <li><img src="iconoAgus.png" alt="Caelis Skybrand" class="pfp-img"><a href="caelisskybrand.html">Caelis Skybrand</a></li>
-                        <li><img src="iconoAndy.png" alt="Arthur Kane" class="pfp-img"><a href="arthurkane.html">Arthur Kane</a></li>
-                        <li><img src="iconoEmi.png" alt="Máximo Duque" class="pfp-img"><a href="maximoduque.html">Máximo Duque</a></li>
-                        <li><img src="iconoPipi.png" alt="Pipi" class="pfp-img"><a href="pipi.html">Pipi</a></li>
-                    </ul>
-                </li>
-                <li class="has-submenu">
-                    <a href="#fondos">Fondos</a>
-                    <ul class="submenu">
-                        <li><a href="#paisajes">Paisajes</a></li>
-                        <li><a href="#pueblos">Pueblos</a></li>
-                        <li><a href="#interiores">Interiores</a></li>
-                    </ul>
-                </li>
-                <li class="has-submenu">
-                    <a href="#mapas">Mapas</a>
-                    <ul class="submenu">
-                        <li><a href="#Islas">Islas</a></li>
-                        <li><a href="#Mapa mundial">Mapa mundial</a></li>
-                        <li><a href="#Mapas del tesoro">Mapas del tesoro</a></li>
-                    </ul>
-                </li>
-                </ul>
+                    <button id="menuBtn">☰</button>
+                        <ul id="navOptions" class="menu.transition">
+                            <button id="closeMenu">✖</button>
+                            <li><a href="index.html">Inicio</a></li>
+                                <li class="has-submenu">
+                                    <a href="#personajes">Personajes</a>
+                                        <ul class="submenu">
+                                            <li><img src="img\iconoFury.png" alt="Nacho D Castro" class="pfp-img"><a href="nachodcastro.html">Nacho D Castro</a></li>
+                                            <li><img src="img\iconoMauri.png" alt="Gerónimo Splinter" class="pfp-img"><a href="geronimosplinter.html">Gerónimo Splinter</a></li>
+                                            <li><img src="img\iconoAgus.png" alt="Caelis Skybrand" class="pfp-img"><a href="caelisskybrand.html">Caelis Skybrand</a></li>
+                                            <li><img src="img\iconoAndy.png" alt="Arthur Kane" class="pfp-img"><a href="arthurkane.html">Arthur Kane</a></li>
+                                            <li><img src="img\iconoEmi.png" alt="Máximo Duque" class="pfp-img"><a href="maximoduque.html">Máximo Duque</a></li>
+                                            <li><img src="img\iconoPipi.png" alt="Pipi" class="pfp-img"><a href="pipi.html">Pipi</a></li>
+                                        </ul>
+                                </li>
+                            <li class="has-submenu">
+                                <a href="#fondos">Fondos</a>
+                                    <ul class="submenu">
+                                        <li><a href="#paisajes">Paisajes</a></li>
+                                        <li><a href="#pueblos">Pueblos</a></li>
+                                        <li><a href="#interiores">Interiores</a></li>
+                                    </ul>
+                            </li>
+                            <li class="has-submenu">
+                                <a href="#mapas">Mapas</a>
+                                    <ul class="submenu">
+                                        <li><a href="#Islas">Islas</a></li>
+                                        <li><a href="#Mapa mundial">Mapa mundial</a></li>
+                                        <li><a href="#Mapas del tesoro">Mapas del tesoro</a></li>
+                                    </ul>
+                            </li>
+                        </ul>
+                </div>
             </div>
         </nav>
+            <img src="img/nachoTitle.png" alt="Título Nacho" class="titulo-nacho">
+            <div class="contenedor-lateral">
+                <button id="btnDesplegar" class="btn-lateral">Datos:</button>
+                    <div id="textoDesplegado" class="texto-oculto">
+                        <p>Este es el texto que se muestra al desplegar.</p>
+                    </div>
+                </div>
+                <div class="perfil-nacho">
+                    <div class="bio-nacho">
+                        <p>
+                            Nacho D. Castro nació en el East Blue, hijo y orgullo de un pequeño poblado donde su dominio del estilo de tres espadas le ganó fama y respeto.<br>
+                            <br>Con la ambición de forjar su leyenda, zarpó solo a explorar mares y desafiar su propio temple… hasta que, en la brumosa isla de Ecos, su camino chocó con Irugadora: el antiguo portador maldito de la Honjo Masamune.<br>
+                            Bajo cielos de niebla y lluvia, ambos desataron un duelo de técnicas ancestrales contra pura furia joven; el acero fantasmagórico de la Masamune lanzaba llamas verdes mientras las tres hojas de Nacho giraban sin descanso.<br>
+                            Horas de choque brutal terminaron cuando Irugadora, en un gesto sobrehumano, casi partió en dos al joven espadachín y clavó la Masamune en su sien, dejando una cicatriz que le cruzaría el pecho como un rayo.<br>
+                            <br>Entre cadáveres y relámpagos, la última advertencia de aquel traidor resonó: “Si sobrevives, te esperaré en el Nuevo Mundo.” Nacho despertó con vida de puro milagro, marcado por el dolor y el terror, y con la Masamune quebrada entre los dientes como recordatorio de ese encuentro.<br>
+                            <br>Hoy, el guerrero empuña dos espadas normales en las manos y su tercera hoja, la legendaria Masamune, sostenida por sus dientes: su mango rojo y dorado un tributo al dueño caído y al trauma que dejó. Aunque su orgullo lo impulsa, las noches de luna llena le traen pesadillas —la risa putrefacta de Irugadora sigue acechándolo— y su corazón late con un propósito tan claro como su sangre seca:<br> 
+                            <br>volver a enfrentarse al no‑muerto, reclamar su revancha y purgar el honor que aquel traidor le robó.
+                        </p>
+                    </div>
+                    <img id="nachoPerfil" src="img/Castro.jpg" alt="Nacho D. Castro">
+                </div>
+            </div>
         <div id="musicControls">
-            <img src="PrevB.png" alt="Anterior" id="prevBtn">
-            <img src="PlayB.png" alt="Reproducir" id="playBtn">
-            <img src="PauseB.png" alt="Pausa" id="pauseBtn" style="display:none;">
-            <img src="NextB.png" alt="Siguiente" id="nextBtn">
-            <img src="RepeatB.png" alt="Repetir" id="repeatBtn">
+            <select id="playlistSelect" title="Seleccionar canción">
+                <option value="">🎬 Intro Record Keeper</option>
+                <option value="">⚔️ Música de pelea 1</option>
+                <option value="">⚔️ Música de pelea 2</option>
+                <option value="">⚔️ Música de pelea 3</option>
+                <option value="">⚔️ Música de pelea 4</option>
+                <option value="">⚔️ Música de pelea 5</option>
+                <option value="">⚔️ Música de pelea 6</option>
+                <option value="">⚔️ Música de pelea 7</option>
+                <option value="">⚔️ Música de pelea 8</option>
+                <option value="">⚔️ Música de pelea 9</option>
+                <option value="">⚔️ Música de pelea 10</option>
+                <option value="">👹 Música de Boss</option>
+                <option value="">👺 Música de Boss 2</option>
+                <option value="">😬 Música de tensión 1</option>
+                <option value="">😨 Música de tensión 2</option>
+                <option value="">⏳ Música de tensión 3</option>
+                <option value="">⚓ Apareció la Marina!</option>
+                <option value="">🏃 Escape</option>
+                <option value="">❓ Confuso</option>
+                <option value="">💥 Isla destruida</option>
+                <option value="">😢 Tristeza</option>
+                <option value="">🏘️ Pueblo 1</option>
+                <option value="">🏘️ Pueblo 2</option>
+                <option value="">🏘️ Pueblo 3</option>
+                <option value="">🏘️ Pueblo 4</option>
+                <option value="">🏘️ Pueblo 5</option>
+                <option value="">🏘️ Pueblo 6</option>
+                <option value="">👋 Despidiendo la Isla</option>
+                <option value="">🎪 Tienda</option>
+                <option value="">🏆 Victoria</option>
+                <option value="">⛵ Navegando 1</option>
+                <option value="">⛵ Navegando 2</option>
+                <option value="">⛵ Navegando 3</option>
+                <option value="">⛵ Navegando 4</option>
+            </select>
+                <img src="img\PrevB.png" alt="Anterior" id="prevBtn">
+                <img src="img\PlayB.png" alt="Reproducir" id="playBtn">
+                <img src="img\PauseB.png" alt="Pausa" id="pauseBtn" style="display:none;">
+                <img src="img\NextB.png" alt="Siguiente" id="nextBtn">
+                <img src="img\RepeatB.png" alt="Repetir" id="repeatBtn">
             <audio id="introMusic" loop></audio>
         </div>
         <script src="music.js"></script>
         <script src="script.js"></script>
+        <script src="charscript.js"></script>
     </body>
 </html>

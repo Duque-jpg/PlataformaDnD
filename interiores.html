@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>One Pipis</title>
+        <link rel="icon" type="image/png" sizes="32x32" href="img\logo OP dnd.png">
+        <link rel="icon" type="image/png" sizes="64x64" href="img\logo OP dnd.png">
+        <link rel="icon" type="image/png" sizes="128x128" href="img\logo OP dnd.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+            <div class="menu-wrapper">
+                <div class="menu-icon">
+            <button id="menuBtn">☰</button>
+            <ul id="navOptions" class="menu.transition">
+                <button id="closeMenu">✖</button>
+                <li><a href="index.html">Inicio</a></li>
+                <li class="has-submenu">
+                    <a href="#personajes">Personajes</a>
+                    <ul class="submenu">
+                        <li><img src="img\iconoFury.png" alt="Nacho D Castro" class="pfp-img"><a href="nachodcastro.html">Nacho D Castro</a></li>
+                        <li><img src="img\iconoMauri.png" alt="Gerónimo Splinter" class="pfp-img"><a href="geronimosplinter.html">Gerónimo Splinter</a></li>
+                        <li><img src="img\iconoAgus.png" alt="Caelis Skybrand" class="pfp-img"><a href="caelisskybrand.html">Caelis Skybrand</a></li>
+                        <li><img src="img\iconoAndy.png" alt="Arthur Kane" class="pfp-img"><a href="arthurkane.html">Arthur Kane</a></li>
+                        <li><img src="img\iconoEmi.png" alt="Máximo Duque" class="pfp-img"><a href="maximoduque.html">Máximo Duque</a></li>
+                        <li><img src="img\iconoPipi.png" alt="Pipi" class="pfp-img"><a href="pipi.html">Pipi</a></li>
+                    </ul>
+                </li>
+                <li class="has-submenu">
+                    <a href="#fondos">Fondos</a>
+                    <ul class="submenu">
+                        <li><a href="#paisajes">Paisajes</a></li>
+                        <li><a href="#pueblos">Pueblos</a></li>
+                        <li><a href="interiores.html">Interiores</a></li>
+                    </ul>
+                </li>
+                <li class="has-submenu">
+                    <a href="#mapas">Mapas</a>
+                    <ul class="submenu">
+                        <li><a href="#Islas">Islas</a></li>
+                        <li><a href="#Mapa mundial">Mapa mundial</a></li>
+                        <li><a href="#Mapas del tesoro">Mapas del tesoro</a></li>
+                    </ul>
+                </li>
+                </ul>
+            </div>
+        </nav>
+  <div class="gallery">
+    <!-- Agrega aquí tus imágenes -->
+     <img src="img/tienda.png" alt="Imagen 1">
+    <img src="img/pueblito.png" alt="Imagen 2">
+    <img src="img/pueblito2.png" alt="Imagen 3">
+    <img src="img/pueblito3.png" alt="Imagen 4">
+    <img src="img/pueblito4.png" alt="Imagen 5">
+  </div>
+
+  <div class="overlay" id="overlay">
+    <button class="close-btn" id="closeBtn">✖</button>
+    <img id="overlayImg" src="" alt="Zoomed">
+  </div>
+
+  <script src="bg.js"></script>
+</body>
+</html>
