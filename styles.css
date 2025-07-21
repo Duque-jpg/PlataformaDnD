@@ -10,6 +10,14 @@ html, body {
     position: relative;
 }
 
+@media (max-width: 768px) {
+  body {
+    transform: scale(0.85);
+    transform-origin: top center;
+  }
+}
+
+
 #logoPrincipal {
   width: 300px;
   display: block;
