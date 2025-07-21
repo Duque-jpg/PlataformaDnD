@@ -1,21 +1,24 @@
-/* responsive.css — mobile & tablet */
+/* responsive.css — Separate Responsive Overrides */
 
-/* 1. GLOBAL: asegurar que no haya overflow horizontal */
+/* 1. GLOBAL RESET */
 html, body {
   overflow-x: hidden;
   box-sizing: border-box;
 }
+*, *::before, *::after {
+  box-sizing: inherit;
+}
 
-/* 2. IMÁGENES Y SVG: siempre fluidas */
+/* 2. FLUID MEDIA */
 img, video {
   max-width: 100%;
   height: auto;
   display: block;
 }
 
-/* 3. ESCALA LIGERA EN MÓVIL (0–767px) */
+/* 3. MOBILE STYLES (up to 767px) */
 @media (max-width: 767px) {
-  /* Logo animado: desactiva posicionado fijo y escala */
+  /* Logo de inicio */
   #logoPrincipal {
     position: relative !important;
     width: 80vw !important;
@@ -23,9 +26,10 @@ img, video {
     transform: none !important;
     margin: 20px auto !important;
     animation: none !important;
+    content: url("/img/Logo definitivo.png");
   }
 
-  /* Menú off‑canvas: ocupa toda la altura y sale desde la derecha */
+  /* Navbar off-canvas */
   .navbar {
     justify-content: space-between;
   }
@@ -34,7 +38,7 @@ img, video {
     top: 0; right: 0;
     width: 0;
     height: 100vh;
-    background: #f4e4c1;
+    background: rgba(0,0,0,0.8);
     transition: width 0.3s ease;
     padding-top: 60px;
     z-index: 1000;
@@ -46,48 +50,67 @@ img, video {
   #closeMenu {
     top: 15px; right: 15px;
   }
+  .submenu {
+    z-index: 1 !important;
+    background: rgba(0,0,0,0.7) !important;
+    transform: translateX(15px) !important;
+  }
+  .has-submenu:hover .submenu,
+  .has-submenu:focus-within .submenu {
+    opacity: 1 !important;
+    transform: translateX(0) !important;
+    pointer-events: auto !important;
+  }
 
-  /* Títulos de personaje */
+  /* Personajes: estructura vertical */
+  body[class$="-bg"] {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  .menu-icon button {
+    transform: scale(0.6);
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 10;
+  }
   .titulo-maximo,
   .titulo-caelis,
   .titulo-nacho {
     width: 90vw;
-    max-width: 300px;
-    top: 10px;
-    height: auto;
-  }
-
-  /* Perfil + bio apilados */
-  .perfil-maximo,
-  .perfil-caelis,
-  .perfil-nacho {
-    position: static !important;
-    margin: 20px auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 12px;
-  }
-  .bio-maximo,
-  .bio-caelis,
-  .bio-nacho {
-    width: 90vw !important;
-    max-width: 300px !important;
-    padding: 10px;
+    max-width: 320px;
+    margin: 60px auto 20px;
+    position: relative;
+    transform: none;
   }
   #maximoPerfil,
   #caelisPerfil,
   #nachoPerfil {
     width: 80vw;
-    max-width: 250px;
+    max-width: 300px;
+    margin: 0 auto 20px;
+    position: relative;
   }
-
-  /* Ocultar lateral toggle */
+  .bio-maximo,
+  .bio-caelis,
+  .bio-nacho {
+    width: 90vw;
+    max-width: 320px;
+    max-height: 300px;
+    overflow-y: auto;
+    background: rgba(0,0,0,0.6);
+    color: #eef6fc;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 40px;
+  }
   .contenedor-lateral {
     display: none !important;
   }
 
-  /* Reproductor: margen y ancho moderado */
+  /* Reproductor de música */
   #musicControls {
     width: 95vw;
     max-width: 350px;
@@ -96,40 +119,49 @@ img, video {
     transform: translateX(-50%);
     padding: 8px;
     gap: 8px;
+    position: fixed;
+  }
+  #musicControls img#repeatBtn {
+    margin-right: 4px;
   }
 }
 
-/* 4. TABLET (768–1024px) */
+/* 4. TABLET STYLES (768px–1024px) */
 @media (min-width: 768px) and (max-width: 1024px) {
-  /* Logo ligeramente más pequeño */
+  /* Logo */
   #logoPrincipal {
+    position: relative !important;
     width: 250px !important;
     margin: 30px auto !important;
-    position: relative !important;
-    animation: none !important;
     transform: none !important;
+    animation: none !important;
+    content: url("/img/Logo definitivo.png");
   }
 
-  /* Menú original (abierto sobre contenido) */
+  /* Navbar normal */
   #navOptions {
     position: absolute;
     top: 0; right: calc(100% + 10px);
     width: 180px;
     height: auto;
-    transform: none !important;
-    opacity: 0; pointer-events: none;
+    background: linear-gradient(to bottom, #f4e4c1, #e0cfa9, #f4e4c1);
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(15px);
   }
   #navOptions.show {
-    opacity: 1; pointer-events: auto;
+    opacity: 1;
+    pointer-events: auto;
     transform: translateY(0);
   }
 
-  /* Títulos y perfiles en fila */
+  /* Personajes estructura mixta */
   .titulo-maximo,
   .titulo-caelis,
   .titulo-nacho {
-    width: auto;
     height: 250px;
+    margin-top: 40px;
+    width: auto;
   }
   .perfil-maximo,
   .perfil-caelis,
@@ -147,14 +179,15 @@ img, video {
   #nachoPerfil {
     width: 300px;
   }
-
-  /* Mantenemos la barra lateral */
   .contenedor-lateral {
     display: flex !important;
   }
 
-  /* Reproductor un poco más ancho */
+  /* Reproductor */
   #musicControls {
     max-width: 400px;
   }
 }
+
+/* 5. DESKTOP (above 1024px) — sin cambios */
+/* Tu styles.css original permanece intacto */
