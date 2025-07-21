@@ -14,4 +14,12 @@ document.addEventListener("DOMContentLoaded", () => {
       bioCaelis.classList.toggle("active");
     });
   }
+
+  const nachoPerfil = document.getElementById("nachoPerfil");
+  if (nachoPerfil) {
+    const bioNacho = document.querySelector(".bio-nacho");
+    NachoPerfil.addEventListener("click", () => {
+      bioNacho.classList.toggle("active");
+    });
+  }
 });
