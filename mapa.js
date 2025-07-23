@@ -1,4 +1,26 @@
 document.addEventListener("DOMContentLoaded", () => {
+    const hotspots = document.querySelectorAll('.hotspot');
+const tooltip = document.getElementById('tooltip');
+
+hotspots.forEach(hotspot => {
+  hotspot.addEventListener('mouseenter', () => {
+    const message = hotspot.getAttribute('data-tooltip');
+    tooltip.textContent = message;
+    tooltip.style.display = 'block';
+  });
+
+  hotspot.addEventListener('mousemove', (e) => {
+    const offsetX = 15; // Separación respecto al mouse
+    const offsetY = 15;
+    tooltip.style.left = `${e.pageX + offsetX}px`;
+    tooltip.style.top = `${e.pageY + offsetY}px`;
+  });
+
+  hotspot.addEventListener('mouseleave', () => {
+    tooltip.style.display = 'none';
+  });
+});
+
   const cont = document.getElementById("mapaContainer");
   const zoom = document.getElementById("mapaZoom");
   const img  = document.getElementById("mapaBase");
