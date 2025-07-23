@@ -507,6 +507,19 @@ body::before {
   padding: 20px;
 }
 
+.maximo-bg .texto-oculto {
+  background: linear-gradient(
+    135deg,
+    #000000 0%,
+    #0a2540 25%,
+    #0077b6 50%,
+    #00b4d8 75%,
+    #a4f9ff 100%
+  );
+  border: 2px solid #1328e2;
+  box-shadow: 0 0 15px 3px rgba(28, 64, 183, 0.6);
+}
+
 .contenedor-lateral {
   position: fixed;
   top: 30%;
@@ -559,11 +572,9 @@ body::before {
   color: #EEE;
   border-radius: 12px;
   max-width: 1000px;
-  box-shadow: 0 0 15px 3px rgba(183, 28, 28, 0.6);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 2rem;
   font-weight: bold;
-  border: 2px solid #B71C1C;
   user-select: text;
   pointer-events: none; /* para que no interfiera cuando está oculto */
   transition: transform 0.3s ease, opacity 0.3s ease;
@@ -785,6 +796,19 @@ body::before {
   padding: 20px;
 }
 
+.caelis-bg .texto-oculto {
+  background: linear-gradient(
+    135deg,
+    #b88c00 0%,     /* Amarillo dorado cálido (sol bajo) */
+    #f4c430 25%,    /* Amarillo sol intenso pero oscuro */
+    #5cb3ff 50%,    /* Celeste claro y vivo (cielo de día) */
+    #3a87c8 75%,    /* Azul celeste profundo */
+    #1e3a5f 100%    /* Azul oscuro profundo */
+  );
+  border: 2px solid #dbc609;
+  box-shadow: 0 0 15px 3px rgba(231, 212, 38, 0.6);
+}
+
 .nacho-bg {
   position: relative;
   overflow: hidden;
@@ -891,6 +915,19 @@ body::before {
 .bio-nacho.active {
   width: 500px;
   padding: 20px;
+}
+
+.nacho-bg .texto-oculto {
+  background: linear-gradient(
+    135deg,
+    #0b3d0b 0%,     /* Verde muy oscuro, casi bosque */
+    #166c2d 25%,    /* Verde medio oscuro */
+    #1d9442 50%,    /* Verde puro equilibrado */
+    #4ed97b 75%,    /* Verde vivo, sin ser chillón */
+    #4ed97b 100%    /* Verde claro pero aún legible con blanco */
+  );
+  border: 2px solid #166c2d;
+  box-shadow: 0 0 15px 3px rgba(70, 231, 38, 0.6);
 }
 
 .splinter-bg {
@@ -1010,6 +1047,19 @@ body::before {
   padding: 20px;
 }
 
+.splinter-bg .texto-oculto {
+  background: linear-gradient(
+    135deg,
+    #3b1f1a 0%,
+    #5a3a30 25%,
+    #4a4e5a 50%,
+    #2b3a5a 75%,
+    #1a2b40 100%
+  );
+  border: 2px solid #3b1f1a;
+  box-shadow: 0 0 15px 3px rgba(63, 21, 4, 0.6);
+}
+
 .arthur-bg {
   position: relative;
   overflow: hidden;
@@ -1127,6 +1177,19 @@ body::before {
   padding: 20px;
 }
 
+.arthur-bg .texto-oculto {
+  background: linear-gradient(
+    135deg,
+    #4a0000 0%,     /* Rojo oscuro sangre seca */
+    #801313 25%,    /* Rojo vino profundo */
+    #a83232 50%,    /* Rojo medio apagado */
+    #5a4a4a 75%,    /* Gris con leve tinte rojizo */
+    #3a3a3a 100%    /* Gris carbón oscuro */
+  );
+  border: 2px solid #be0909;
+  box-shadow: 0 0 15px 3px rgba(160, 8, 8, 0.6);
+}
+
 .pipi-bg {
   position: relative;
   overflow: hidden;
@@ -1185,7 +1248,7 @@ body::before {
 }
 
 .titulo-pipi:hover {
-  filter: drop-shadow(0 0 15px #f5cba7);
+  filter: drop-shadow(0 0 15px #fcad5d);
   transform: translateX(-50%) scale(1.05);
   cursor: pointer;
 }
@@ -1242,4 +1305,17 @@ body::before {
 .bio-pipi.active {
   width: 500px;
   padding: 20px;
+}
+
+.pipi-bg .texto-oculto {
+  background: linear-gradient(
+    135deg,
+    #5a2a00 0%,     /* Naranja marrón oscuro, tipo tierra quemada */
+    #a34810 25%,    /* Naranja tostado profundo */
+    #d76d1a 50%,    /* Naranja medio, vibrante pero no chillón */
+    #e89c4f 75%,    /* Naranja claro tipo caramelo */
+    #f5cba7 100%    /* Beige cálido, suave pero con contraste */
+  );
+  border: 2px solid #d76d1a;
+  box-shadow: 0 0 15px 3px rgba(240, 114, 11, 0.623);
 }
