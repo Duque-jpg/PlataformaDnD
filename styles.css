@@ -1,13 +1,55 @@
 html {
-  scroll-behavior: smooth;
+  width: 100%;
+  scroll-behavior: smooth; /* opcional para suavizar el scroll */
 }
 
-html, body {
-    height: 100%;
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    position: relative;
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.mapamundi-bg {
+  position: relative;
+  overflow: hidden;
+}
+
+.mapamundi-bg::before {
+  content: "";
+  position: fixed; /* o absolute si preferís */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('img/mapamundibg.jpg');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.4; /* 👈 Opacidad solo del fondo */
+  z-index: -1;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: linear-gradient(to bottom, #111 0%, #222 50%, #111 100%);
+  z-index: -2;
+}
+
+.mapamundi-bg::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* debajo del contenido */
+  background-image: url('img/mapamundibg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
 }
 
 #logoPrincipal {
@@ -215,7 +257,7 @@ header {
   transition: opacity 0.4s ease, transform 0.4s ease;
   list-style: none;
   padding-left: 0;
-  margin-left: 0; 
+  margin-left: 0;
 }
 
 .has-submenu.below > .submenu {
@@ -446,7 +488,7 @@ body::before {
     #0a2540 25%,
     #0077b6 50%,
     #00b4d8 75%,
-    #ffffff 100%
+    #a4f9ff 100%
   );
   color: #eef6fc;
   font-weight: bold;
@@ -467,7 +509,7 @@ body::before {
 
 .contenedor-lateral {
   position: fixed;
-  top: 50%;
+  top: 30%;
   left: 0;
   transform: translateY(-50%);
   display: flex;
@@ -476,7 +518,7 @@ body::before {
 }
 
 .btn-lateral {
-  background-color: #111; /* negro mate */
+  background: linear-gradient(to bottom, #111 0%, #222 50%, #111 100%);
   color: #FFD600; /* amarillo vibrante */
   border: 2px solid #B71C1C; /* rojo oscuro */
   padding: 14px 18px;
@@ -487,12 +529,14 @@ body::before {
   border-bottom-right-radius: 12px;
   transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
   box-shadow: 0 0 8px #B71C1C;
+  font-size: 2rem;
+  
 }
 
 .btn-lateral:hover {
   background-color: #B71C1C; /* rojo oscuro */
-  color: #A5D6A7; /* verde lima suave */
-  border-color: #FFD600; /* amarillo borde */
+  color: #00a005; /* verde lima suave */
+  border-color: #FFD600; /* amarillo borde*/
   box-shadow: 0 0 12px #FFD600;
 }
 
@@ -500,23 +544,56 @@ body::before {
   display: block; /* ahora siempre está en el DOM */
   position: absolute;
   left: 100%;
-  top: 50%;
+  top: 420%;
+  width: 0;
+  height: 650px;
   transform: translateY(-50%) translateX(-20px);
   opacity: 0;
-  background-color: rgba(17, 17, 17, 0.9);
+  overflow: hidden;
+  background: linear-gradient(45deg,
+    #5f0101 0%,     /* Rojo oscuro sangre seca */
+    #690a0a 25%,    /* Rojo vino profundo */
+    #581212 50%,    /* Rojo medio apagado */
+    #2b2222 75%,    /* Gris con leve tinte rojizo */
+    #181818 100%    /* Gris carbón oscuro */ );
   color: #EEE;
-  padding: 18px 24px;
   border-radius: 12px;
-  max-width: 280px;
+  max-width: 1000px;
   box-shadow: 0 0 15px 3px rgba(183, 28, 28, 0.6);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 1rem;
-  line-height: 1.4;
+  font-size: 2rem;
+  font-weight: bold;
   border: 2px solid #B71C1C;
   user-select: text;
   pointer-events: none; /* para que no interfiera cuando está oculto */
   transition: transform 0.3s ease, opacity 0.3s ease;
   z-index: 999;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+}
+
+.texto-oculto h2 {
+  text-align: center;
+  color: #00aaff;
+  background-color: #54a4ff77;
+  width: auto;
+  border-radius: 10px;
+}
+
+.arreglo {
+  transform: translateY(-80px);
+}
+
+.izquierda {
+  text-align: start;
+  color: #FFD600;
+}
+
+.derecha {
+  text-align: end;
+  transform: translateY(-80px);
+  color: #FFD600;
 }
 
 .texto-oculto p {
@@ -535,6 +612,8 @@ body::before {
   transform: translateY(-50%) translateX(0);
   opacity: 1;
   pointer-events: auto;
+  width: 1000px;
+  padding: 20px;
 }
 
 .gallery {
@@ -683,11 +762,11 @@ body::before {
   overflow: hidden;
   background: linear-gradient(
     135deg,
-    #000000 0%,
-    #403c0a 25%,
-    #aab600 50%,
-    #d8ca00 75%,
-    #cfcfcf 100%
+    #b88c00 0%,     /* Amarillo dorado cálido (sol bajo) */
+    #f4c430 25%,    /* Amarillo sol intenso pero oscuro */
+    #5cb3ff 50%,    /* Celeste claro y vivo (cielo de día) */
+    #3a87c8 75%,    /* Azul celeste profundo */
+    #1e3a5f 100% 
   );
   color: #eef6fc;
   font-weight: bold;
@@ -718,7 +797,7 @@ body::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('img/CaelisBG.png');
+  background-image: url('img/NachoBG.png');
   background-size: cover;
   background-position: center;
   opacity: 0.4; /* 👈 Opacidad solo del fondo */
@@ -733,7 +812,7 @@ body::before {
   width: 100%;
   height: 100%;
   z-index: -1; /* debajo del contenido */
-  background-image: url('img/CaelisBG.png');
+  background-image: url('img/NachoBG.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -750,12 +829,12 @@ body::before {
   transform: translateX(-50%) scale(1);
   height: 300px;
   width: auto;
-  filter: drop-shadow(0 0 12px #ffd900);
+  filter: drop-shadow(0 0 12px #4ed97b);
   transition: transform 0.3s ease, filter 0.3s ease;
 }
 
 .titulo-nacho:hover {
-  filter: drop-shadow(0 0 15px #ffde20);
+  filter: drop-shadow(0 0 15px #4ed97b);
   transform: translateX(-50%) scale(1.05);
   cursor: pointer;
 }
@@ -779,7 +858,7 @@ body::before {
 }
 
 #nachoPerfil:hover {
-  filter: drop-shadow(0 0 15px #ffe600);
+  filter: drop-shadow(0 0 15px #4ed97b);
   transform: scale(1.05);
   transition: transform 0.3s ease, filter 0.3s ease;
   cursor: pointer;
@@ -791,11 +870,11 @@ body::before {
   overflow: hidden;
   background: linear-gradient(
     135deg,
-    #000000 0%,
-    #403c0a 25%,
-    #aab600 50%,
-    #d8ca00 75%,
-    #cfcfcf 100%
+    #0b3d0b 0%,     /* Verde muy oscuro, casi bosque */
+    #166c2d 25%,    /* Verde medio oscuro */
+    #1d9442 50%,    /* Verde puro equilibrado */
+    #4ed97b 75%,    /* Verde vivo, sin ser chillón */
+    #4ed97b 100%    /* Verde claro pero aún legible con blanco */
   );
   color: #eef6fc;
   font-weight: bold;
@@ -810,6 +889,357 @@ body::before {
 }
 
 .bio-nacho.active {
+  width: 500px;
+  padding: 20px;
+}
+
+.splinter-bg {
+  position: relative;
+  overflow: hidden;
+}
+
+.splinter-bg::before {
+  content: "";
+  position: fixed; /* o absolute si preferís */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('img/SplinterBG.png');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.4; /* 👈 Opacidad solo del fondo */
+  z-index: -1;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: linear-gradient(to bottom, #111 0%, #222 50%, #111 100%);
+  z-index: -2;
+}
+
+.splinter-bg::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* debajo del contenido */
+  background-image: url('img/SplinterBG.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  /* Overlay oscuro encima del fondo */
+  background-color: rgba(0, 0, 0, 0.726);
+  background-blend-mode: multiply;
+}
+
+.titulo-splinter {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%) scale(1);
+  height: 300px;
+  width: auto;
+  filter: drop-shadow(0 0 12px #643e0d);
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.titulo-splinter:hover {
+  filter: drop-shadow(0 0 15px #865412);
+  transform: translateX(-50%) scale(1.05);
+  cursor: pointer;
+}
+
+
+.perfil-splinter {
+  position: absolute;
+  top: 170px;
+  right: 200px;
+  display: flex;
+  align-items: flex-start;
+}
+
+#splinterPerfil {
+  width: 380px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+#splinterPerfil:hover {
+  filter: drop-shadow(0 0 15px #502e01);
+  transform: scale(1.05);
+  transition: transform 0.3s ease, filter 0.3s ease;
+  cursor: pointer;
+}
+
+.bio-splinter {
+  width: 0;
+  height: auto;
+  overflow: hidden;
+  background: linear-gradient(
+    135deg,
+    #3b1f1a 0%,
+    #5a3a30 25%,
+    #4a4e5a 50%,
+    #2b3a5a 75%,
+    #1a2b40 100%
+  );
+  color: #eef6fc;
+  font-weight: bold;
+  padding: 0;
+  border-radius: 12px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: width 0.5s ease, padding 0.5s ease;
+}
+
+.bio-splinter.active {
+  width: 500px;
+  padding: 20px;
+}
+
+.arthur-bg {
+  position: relative;
+  overflow: hidden;
+}
+
+.arthur-bg::before {
+  content: "";
+  position: fixed; /* o absolute si preferís */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('img/SplinterBG.png');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.4; /* 👈 Opacidad solo del fondo */
+  z-index: -1;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: linear-gradient(to bottom, #111 0%, #222 50%, #111 100%);
+  z-index: -2;
+}
+
+.arthur-bg::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* debajo del contenido */
+  background-image: url('img/ArthurBG.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  /* Overlay oscuro encima del fondo */
+  background-color: rgba(0, 0, 0, 0.726);
+  background-blend-mode: multiply;
+}
+
+.titulo-arthur {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%) scale(1);
+  height: 300px;
+  width: auto;
+  filter: drop-shadow(0 0 12px #801313);
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.titulo-arthur:hover {
+  filter: drop-shadow(0 0 15px #a83232);
+  transform: translateX(-50%) scale(1.05);
+  cursor: pointer;
+}
+
+
+.perfil-arthur {
+  position: absolute;
+  top: 170px;
+  right: 200px;
+  display: flex;
+  align-items: flex-start;
+}
+
+#arthurPerfil {
+  width: 380px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+#arthurPerfil:hover {
+  filter: drop-shadow(0 0 15px #801313);
+  transform: scale(1.05);
+  transition: transform 0.3s ease, filter 0.3s ease;
+  cursor: pointer;
+}
+
+.bio-arthur {
+  width: 0;
+  height: auto;
+  overflow: hidden;
+  background: linear-gradient(
+    135deg,
+    #4a0000 0%,     /* Rojo oscuro sangre seca */
+    #801313 25%,    /* Rojo vino profundo */
+    #a83232 50%,    /* Rojo medio apagado */
+    #5a4a4a 75%,    /* Gris con leve tinte rojizo */
+    #3a3a3a 100%    /* Gris carbón oscuro */
+  );
+  color: #eef6fc;
+  font-weight: bold;
+  padding: 0;
+  border-radius: 12px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: width 0.5s ease, padding 0.5s ease;
+}
+
+.bio-arthur.active {
+  width: 500px;
+  padding: 20px;
+}
+
+.pipi-bg {
+  position: relative;
+  overflow: hidden;
+}
+
+.pipi-bg::before {
+  content: "";
+  position: fixed; /* o absolute si preferís */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('img/PipiBG.png');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.4; /* 👈 Opacidad solo del fondo */
+  z-index: -1;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: linear-gradient(to bottom, #111 0%, #222 50%, #111 100%);
+  z-index: -2;
+}
+
+.pipi-bg::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* debajo del contenido */
+  background-image: url('img/PipiBG.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  /* Overlay oscuro encima del fondo */
+  background-color: rgba(0, 0, 0, 0.726);
+  background-blend-mode: multiply;
+}
+
+.titulo-pipi {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%) scale(1);
+  height: 300px;
+  width: auto;
+  filter: drop-shadow(0 0 12px #e89c4f);
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.titulo-pipi:hover {
+  filter: drop-shadow(0 0 15px #f5cba7);
+  transform: translateX(-50%) scale(1.05);
+  cursor: pointer;
+}
+
+
+.perfil-pipi {
+  position: absolute;
+  top: 170px;
+  right: 200px;
+  display: flex;
+  align-items: flex-start;
+}
+
+#pipiPerfil {
+  width: 380px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+#pipiPerfil:hover {
+  filter: drop-shadow(0 0 15px #a34810);
+  transform: scale(1.05);
+  transition: transform 0.3s ease, filter 0.3s ease;
+  cursor: pointer;
+}
+
+.bio-pipi {
+  width: 0;
+  height: auto;
+  overflow: hidden;
+  background: linear-gradient(
+    135deg,
+    #5a2a00 0%,     /* Naranja marrón oscuro, tipo tierra quemada */
+    #a34810 25%,    /* Naranja tostado profundo */
+    #d76d1a 50%,    /* Naranja medio, vibrante pero no chillón */
+    #e89c4f 75%,    /* Naranja claro tipo caramelo */
+    #f5cba7 100%    /* Beige cálido, suave pero con contraste */
+  );
+  color: #eef6fc;
+  font-weight: bold;
+  padding: 0;
+  border-radius: 12px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: width 0.5s ease, padding 0.5s ease;
+}
+
+.bio-pipi.active {
   width: 500px;
   padding: 20px;
 }

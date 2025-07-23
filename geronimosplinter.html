@@ -4,59 +4,118 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>One Pipis</title>
-        <link rel="icon" type="image/png" sizes="32x32" href="logo OP dnd.png">
-        <link rel="icon" type="image/png" sizes="64x64" href="logo OP dnd.png">
-        <link rel="icon" type="image/png" sizes="128x128" href="logo OP dnd.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="img\logo OP dnd.png">
+        <link rel="icon" type="image/png" sizes="64x64" href="img\logo OP dnd.png">
+        <link rel="icon" type="image/png" sizes="128x128" href="img\logo OP dnd.png">
         <link rel="stylesheet" href="styles.css">
-<link rel="stylesheet" href="responsive.css">
+        <link rel="stylesheet" href="responsive.css">
     </head>
-    <body>
-        <nav class="navbar">
-            <div class="menu-wrapper">
-                <div class="menu-icon">
-            <button id="menuBtn">☰</button>
-            <ul id="navOptions" class="menu.transition">
-                <button id="closeMenu">✖</button>
-                <li><a href="index.html">Inicio</a></li>
-                <li class="has-submenu">
-                    <a href="#personajes">Personajes</a>
-                    <ul class="submenu">
-                        <li><img src="iconoFury.png" alt="Nacho D Castro" class="pfp-img"><a href="nachodcastro.html">Nacho D Castro</a></li>
-                        <li><img src="iconoMauri.png" alt="Gerónimo Splinter" class="pfp-img"><a href="geronimosplinter.html">Gerónimo Splinter</a></li>
-                        <li><img src="iconoAgus.png" alt="Caelis Skybrand" class="pfp-img"><a href="caelisskybrand.html">Caelis Skybrand</a></li>
-                        <li><img src="iconoAndy.png" alt="Arthur Kane" class="pfp-img"><a href="arthurkane.html">Arthur Kane</a></li>
-                        <li><img src="iconoEmi.png" alt="Máximo Duque" class="pfp-img"><a href="maximoduque.html">Máximo Duque</a></li>
-                        <li><img src="iconoPipi.png" alt="Pipi" class="pfp-img"><a href="pipi.html">Pipi</a></li>
+    <body class="splinter-bg">
+        <div class="wrapper">
+            <nav class="navbar">
+                <div class="menu-wrapper">
+                    <div class="menu-icon">
+                <button id="menuBtn">☰</button>
+                <ul id="navOptions" class="menu transition nav-list">
+                    <button id="closeMenu">✖</button>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li class="has-submenu">
+                        <a href="#personajes">Personajes</a>
+                        <ul class="submenu">
+                            <li><img src="img\iconoFury.png" alt="Nacho D Castro" class="pfp-img"><a href="nachodcastro.html">Nacho D Castro</a></li>
+                            <li><img src="img\iconoMauri.png" alt="Gerónimo Splinter" class="pfp-img"><a href="geronimosplinter.html">Gerónimo Splinter</a></li>
+                            <li><img src="img\iconoAgus.png" alt="Caelis Skybrand" class="pfp-img"><a href="caelisskybrand.html">Caelis Skybrand</a></li>
+                            <li><img src="img\iconoAndy.png" alt="Arthur Kane" class="pfp-img"><a href="arthurkane.html">Arthur Kane</a></li>
+                            <li><img src="img\iconoEmi.png" alt="Máximo Duque" class="pfp-img"><a href="maximoduque.html">Máximo Duque</a></li>
+                            <li><img src="img\iconoPipi.png" alt="Pipi" class="pfp-img"><a href="pipi.html">Pipi</a></li>
+                        </ul>
+                    </li>
+                     
+                    <li class="has-submenu">
+                        <a href="#mapas">Mapas</a>
+                        <ul class="submenu">
+                            <li><a href="#Islas">Islas</a></li>
+                            <li><a href="mapamundi.html">Mapa mundial</a></li>
+                             
+                        </ul>
+                    </li>
                     </ul>
-                </li>
-                <li class="has-submenu">
-                    <a href="#fondos">Fondos</a>
-                    <ul class="submenu">
-                        <li><a href="#paisajes">Paisajes</a></li>
-                        <li><a href="#pueblos">Pueblos</a></li>
-                        <li><a href="#interiores">Interiores</a></li>
-                    </ul>
-                </li>
-                <li class="has-submenu">
-                    <a href="#mapas">Mapas</a>
-                    <ul class="submenu">
-                        <li><a href="#Islas">Islas</a></li>
-                        <li><a href="#Mapa mundial">Mapa mundial</a></li>
-                        <li><a href="#Mapas del tesoro">Mapas del tesoro</a></li>
-                    </ul>
-                </li>
-                </ul>
+                </div>
+            </nav>
+            <img src="img/splinterTitle.png" alt="Título Splinter" class="titulo-splinter">
+            <div class="contenedor-lateral">
+                <button id="btnDesplegar" class="btn-lateral">Datos:</button>
+                    <div id="textoDesplegado" class="texto-oculto">
+                        <p>Este es el texto que se muestra al desplegar.</p>
+                    </div>
+                </div>
+                <div class="perfil-splinter">
+                    <div class="bio-splinter">
+                        <p>
+                            Splinter era un mink esclavo de una tripulación pirata cuando era un niño muy pequeño. Fue abandonado en una isla del East Blue, donde conoció a un científico y arqueólogo llamado Martin P. Disalvo, quien lo crió durante años como si fuese su hijo y le transmitió sus conocimientos al pequeño roedor.<br>
+
+                            <br>Una noche de luna llena, Splinter se sentía mal. Salió de su casa y se perdió en el bosque. Esa misma noche, la Marina planeó un ataque contra el científico Disalvo, ya que habían recibido información de que estaba investigando los secretos de un misterioso Poneglyph.
+
+                            Mientras esto sucedía, Splinter, perdido en el bosque, perdió el conocimiento. <br>Cuando despertó, ya era de día. Notó que a su alrededor había árboles rotos y marcas de garras. Al regresar al pueblo, lo encontró completamente destruido: las casas estaban quemadas y todos sus habitantes, muertos.<br>
+
+                            <br>Cuando fue a su casa, encontró el cuerpo asesinado de su padre adoptivo y el lugar hecho escombros. Lleno de tristeza, abrazó el cadáver de Disalvo y notó que este tenía una llave en la mano. El científico solía encerrarse por horas en su sótano, pero jamás le había permitido al ratón entrar allí.
+
+                            Splinter usó la llave y entró al sótano de su maestro. Allí encontró los textos de Disalvo que hablaban de un posible Poneglyph perdido, junto con un mapa encriptado en un lenguaje indescriptible para cualquier persona. La única persona que Splinter conocía capaz de leer ese mapa era el mejor amigo de Disalvo:<br> 
+                            <br>Su tío, el Dr. Vegapunk.<br>
+
+                            <br>Ahora, Splinter se embarca en un viaje a Eggland en busca de su tío, con la esperanza de cumplir el sueño de su maestro.
+                        </p>
+                    </div>
+                    <img id="splinterPerfil" src="img/perfilSplinter.png" alt="Gerónimo Splinter">
+                </div>
             </div>
-        </nav>
-        <div id="musicControls">
-            <img src="PrevB.png" alt="Anterior" id="prevBtn">
-            <img src="PlayB.png" alt="Reproducir" id="playBtn">
-            <img src="PauseB.png" alt="Pausa" id="pauseBtn" style="display:none;">
-            <img src="NextB.png" alt="Siguiente" id="nextBtn">
-            <img src="RepeatB.png" alt="Repetir" id="repeatBtn">
+        <div id="musicControls" class="music-player">
+            <select id="playlistSelect" title="Seleccionar canción">
+                <option value="">🎬 Intro Record Keeper</option>
+                <option value="">⚔️ Música de pelea 1</option>
+                <option value="">⚔️ Música de pelea 2</option>
+                <option value="">⚔️ Música de pelea 3</option>
+                <option value="">⚔️ Música de pelea 4</option>
+                <option value="">⚔️ Música de pelea 5</option>
+                <option value="">⚔️ Música de pelea 6</option>
+                <option value="">⚔️ Música de pelea 7</option>
+                <option value="">⚔️ Música de pelea 8</option>
+                <option value="">⚔️ Música de pelea 9</option>
+                <option value="">⚔️ Música de pelea 10</option>
+                <option value="">👹 Música de Boss</option>
+                <option value="">👺 Música de Boss 2</option>
+                <option value="">😬 Música de tensión 1</option>
+                <option value="">😨 Música de tensión 2</option>
+                <option value="">⏳ Música de tensión 3</option>
+                <option value="">⚓ Apareció la Marina!</option>
+                <option value="">🏃 Escape</option>
+                <option value="">❓ Confuso</option>
+                <option value="">💥 Isla destruida</option>
+                <option value="">😢 Tristeza</option>
+                <option value="">🏘️ Pueblo 1</option>
+                <option value="">🏘️ Pueblo 2</option>
+                <option value="">🏘️ Pueblo 3</option>
+                <option value="">🏘️ Pueblo 4</option>
+                <option value="">🏘️ Pueblo 5</option>
+                <option value="">🏘️ Pueblo 6</option>
+                <option value="">👋 Despidiendo la Isla</option>
+                <option value="">🎪 Tienda</option>
+                <option value="">🏆 Victoria</option>
+                <option value="">⛵ Navegando 1</option>
+                <option value="">⛵ Navegando 2</option>
+                <option value="">⛵ Navegando 3</option>
+                <option value="">⛵ Navegando 4</option>
+            </select>
+                <img src="img\PrevB.png" alt="Anterior" id="prevBtn">
+                <img src="img\PlayB.png" alt="Reproducir" id="playBtn">
+                <img src="img\PauseB.png" alt="Pausa" id="pauseBtn" style="display:none;">
+                <img src="img\NextB.png" alt="Siguiente" id="nextBtn">
+                <img src="img\RepeatB.png" alt="Repetir" id="repeatBtn">
             <audio id="introMusic" loop></audio>
-        </div>
+        
         <script src="music.js"></script>
         <script src="script.js"></script>
+        <script src="charscript.js"></script>
+        </div>
     </body>
 </html>

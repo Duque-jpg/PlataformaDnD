@@ -7,40 +7,73 @@
     padding: 0 1rem;
     overflow-x: hidden;
   }
-
+  #menuBtn {
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    z-index: 999;
+    background: #900; /* rojo oscuro */
+    color: white;
+    font-size: 1.5rem;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+  }
   /* Navbar: menú off-canvas */
   .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: space-between;  /* Logo a la izquierda, menú a la derecha */
+    align-items: center;             /* Centra verticalmente */
+    padding: 5px 1rem;               /* Menos espacio en mobile */
   }
+  
   .nav-list {
-    position: fixed;
-    top: 0; right: -100%;
-    width: 75vw;
-    height: 100vh;
-    background: rgba(0,0,0,0.9);
-    flex-direction: column;
-    padding: 4rem 1rem;
-    gap: 1.5rem;
-    transition: right 0.3s ease;
-    z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;                  /* siempre pegado al borde izquierdo */
+  height: 100vh;
+  width: 75vw;              /* o 250px, lo que prefieras */
+  max-width: 300px;
+  background: #111;
+  transform: translateX(-100%);  /* fuera de pantalla */
+  transition: transform 0.3s ease-in-out;
+  z-index: 1000;            /* por encima de todo */
   }
+
   .nav-list.show {
-    right: 0;
+  transform: translateX(0);
   }
+
   .nav-list li {
     text-align: center;
   }
 
-  /* Logo héroe */
-  .hero-logo {
-    display: block;
-    width: 80vw;
-    max-width: 220px;
-    margin: 2rem auto;
-    animation: none !important;
+  .logo-wrapper {
+    /* Ocupa todo el alto del viewport */
+    display: flex;
+    justify-content: center; /* centra horizontal */
+    align-items: center;     /* centra vertical */
+    top: 20%; /* espacio desde arriba */
+    height: 60vh;           /* altura completa */
+    width: 48vh;
   }
+  
+  #logoPrincipal {
+    width: 100vw;
+    max-width: 400px;
+    /* Quitar márgenes y posicionamiento previo */
+    margin: 0;
+    position: static !important;
+    transform: none !important;
+    animation: none !important;
+    opacity: 1 !important;
+    z-index: 1 !important; 
+  }
+
+  #logoPrincipal:hover {
+  transform: none !important;
+  filter: none !important;
+}
 
   /* Music player: fluid y wrap */
   .music-player {
@@ -60,7 +93,7 @@
   }
   .music-player select {
     flex: 1 1 100%;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.1rem;
   }
   .music-player .controls {
     flex: 1 1 100%;
@@ -125,11 +158,26 @@
     justify-content: center;
   }
 
-  /* Hero logo más grande */
-  .hero-logo {
-    width: 60vw;
-    max-width: 300px;
-    margin: 2.5rem auto;
+  #logoPrincipal {
+    /* Tamaño relativo al ancho del viewport */
+    width: 80vw;
+    max-width: 200px;
+
+    /* Desactiva el posicionamiento fijo y el transform brutal */
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    transform: none !important;
+
+    /* Centrado natural con margin */
+    margin: 2rem auto !important;
+    
+    /* Quita animaciones pesadas en móvil */
+    animation: none !important;
+    opacity: 1 !important;
+
+    /* Mantén sólo el hover si quieres */
+    transition: transform 0.3s ease, filter 0.3s ease;
   }
 
   /* Music player unificado */
