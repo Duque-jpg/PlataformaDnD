@@ -10,7 +10,7 @@
         <link rel="stylesheet" href="styles.css">
         <link rel="stylesheet" href="responsive.css">
     </head>
-    <body>
+    <body id="mapita">
         <div class="wrapper">
             <nav class="navbar">
                 <div class="menu-wrapper">
@@ -46,11 +46,12 @@
                 <img src="img/mapamundibg.jpg" id="mapaBase" alt="Mapa">
 
                 <!-- Hotspots encima del mapa -->
-                <div class="hotspot" style="top: 35%; left: 42%;" data-info="Isla del Tiburón" onclick="location.href='islashark.html'"></div>
-                <div class="hotspot" style="top: 60%; left: 22%;" data-info="Pueblo Mink" onclick="location.href='pueblomink.html'"></div>
+                <div class="hotspot" style="top: 35%; left: 42%;" data-info="Isla del Tiburón" onclick="location.href='islashark.html'">📍</div>
+                <div class="hotspot" style="top: 60%; left: 22%;" data-info="Pueblo Mink" onclick="location.href='pueblomink.html'">📍</div>
             </div>
         </div>
         <div id="tooltip" class="tooltip"></div>
+        <div id="galeria-container" class="galeria-oculta"></div>
         <div id="musicControls" class="music-player">
             <select id="playlistSelect" title="Seleccionar canción">
                 <option value="">🎬 Intro Record Keeper</option>
