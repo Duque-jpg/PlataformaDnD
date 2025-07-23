@@ -9,49 +9,6 @@ body {
   font-family: Arial, sans-serif;
 }
 
-.mapamundi-bg {
-  position: relative;
-  overflow: hidden;
-}
-
-.mapamundi-bg::before {
-  content: "";
-  position: fixed; /* o absolute si preferís */
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url('img/mapamundibg.jpg');
-  background-size: cover;
-  background-position: center;
-  opacity: 0.4; /* 👈 Opacidad solo del fondo */
-  z-index: -1;
-}
-
-body::before {
-  content: "";
-  position: fixed;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: linear-gradient(to bottom, #111 0%, #222 50%, #111 100%);
-  z-index: -2;
-}
-
-.mapamundi-bg::after {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1; /* debajo del contenido */
-  background-image: url('img/mapamundibg.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-}
-
 #logoPrincipal {
   width: 300px;
   display: block;
@@ -1318,4 +1275,57 @@ body::before {
   );
   border: 2px solid #d76d1a;
   box-shadow: 0 0 15px 3px rgba(240, 114, 11, 0.623);
+}
+
+/* ========== MAPA INTERACTIVO ========== */
+
+#mapaContainer {
+    width: 90vw;       /* obliga un límite de ancho */
+    height: 88vh;      /* obliga un límite de alto */
+    margin: 20px auto;
+    overflow: hidden;
+    cursor: grab;
+    border: 2px solid #333;
+    border-radius: 10px;
+    }
+    #mapaZoom {
+      transform-origin: top left;
+      transition: transform 0.1s ease-out;
+    }
+    #mapaBase {
+      display: block;
+      width: 100%;
+      user-select: none;
+      pointer-events: none;
+    }
+
+.hotspot {
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  background-color: rgba(255, 0, 0, 0.6);
+  border: 2px solid white;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+  z-index: 5;
+}
+
+.hotspot:hover {
+  transform: scale(1.5);
+  background-color: rgba(255, 100, 100, 0.8);
+}
+
+.tooltip {
+  position: absolute;
+  display: none;
+  background: rgba(20, 20, 20, 0.9);
+  color: #fff;
+  padding: 6px 12px;
+  font-size: 14px;
+  border-radius: 5px;
+  pointer-events: none;
+  z-index: 10;
+  box-shadow: 0 0 10px #000;
+  white-space: nowrap;
 }
