@@ -11,44 +11,37 @@
 <link rel="stylesheet" href="responsive.css">
     </head>
     <body class="caelis-bg">
-        <nav class="navbar">
-            <div class="menu-wrapper">
-                <div class="menu-icon">
-                    <button id="menuBtn">☰</button>
-                        <ul id="navOptions" class="menu.transition">
-                            <button id="closeMenu">✖</button>
-                            <li><a href="index.html">Inicio</a></li>
-                                <li class="has-submenu">
-                                    <a href="#personajes">Personajes</a>
-                                        <ul class="submenu">
-                                            <li><img src="img\iconoFury.png" alt="Nacho D Castro" class="pfp-img"><a href="nachodcastro.html">Nacho D Castro</a></li>
-                                            <li><img src="img\iconoMauri.png" alt="Gerónimo Splinter" class="pfp-img"><a href="geronimosplinter.html">Gerónimo Splinter</a></li>
-                                            <li><img src="img\iconoAgus.png" alt="Caelis Skybrand" class="pfp-img"><a href="caelisskybrand.html">Caelis Skybrand</a></li>
-                                            <li><img src="img\iconoAndy.png" alt="Arthur Kane" class="pfp-img"><a href="arthurkane.html">Arthur Kane</a></li>
-                                            <li><img src="img\iconoEmi.png" alt="Máximo Duque" class="pfp-img"><a href="maximoduque.html">Máximo Duque</a></li>
-                                            <li><img src="img\iconoPipi.png" alt="Pipi" class="pfp-img"><a href="pipi.html">Pipi</a></li>
-                                        </ul>
-                                </li>
-                            <li class="has-submenu">
-                                <a href="#fondos">Fondos</a>
-                                    <ul class="submenu">
-                                        <li><a href="#paisajes">Paisajes</a></li>
-                                        <li><a href="#pueblos">Pueblos</a></li>
-                                        <li><a href="#interiores">Interiores</a></li>
-                                    </ul>
-                            </li>
-                            <li class="has-submenu">
-                                <a href="#mapas">Mapas</a>
-                                    <ul class="submenu">
-                                        <li><a href="#Islas">Islas</a></li>
-                                        <li><a href="#Mapa mundial">Mapa mundial</a></li>
-                                        <li><a href="#Mapas del tesoro">Mapas del tesoro</a></li>
-                                    </ul>
-                            </li>
+        <div class="wrapper">
+            <nav class="navbar">
+                <div class="menu-wrapper">
+                    <div class="menu-icon">
+                <button id="menuBtn">☰</button>
+                <ul id="navOptions" class="menu transition nav-list">
+                    <button id="closeMenu">✖</button>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li class="has-submenu">
+                        <a href="#personajes">Personajes</a>
+                        <ul class="submenu">
+                            <li><img src="img\iconoFury.png" alt="Nacho D Castro" class="pfp-img"><a href="nachodcastro.html">Nacho D Castro</a></li>
+                            <li><img src="img\iconoMauri.png" alt="Gerónimo Splinter" class="pfp-img"><a href="geronimosplinter.html">Gerónimo Splinter</a></li>
+                            <li><img src="img\iconoAgus.png" alt="Caelis Skybrand" class="pfp-img"><a href="caelisskybrand.html">Caelis Skybrand</a></li>
+                            <li><img src="img\iconoAndy.png" alt="Arthur Kane" class="pfp-img"><a href="arthurkane.html">Arthur Kane</a></li>
+                            <li><img src="img\iconoEmi.png" alt="Máximo Duque" class="pfp-img"><a href="maximoduque.html">Máximo Duque</a></li>
+                            <li><img src="img\iconoPipi.png" alt="Pipi" class="pfp-img"><a href="pipi.html">Pipi</a></li>
                         </ul>
+                    </li>
+                     
+                    <li class="has-submenu">
+                        <a href="#mapas">Mapas</a>
+                        <ul class="submenu">
+                            <li><a href="#Islas">Islas</a></li>
+                            <li><a href="mapamundi.html">Mapa mundial</a></li>
+                             
+                        </ul>
+                    </li>
+                    </ul>
                 </div>
-            </div>
-        </nav>
+            </nav>
             <img src="img/caelisTitle.png" alt="Título Caelis" class="titulo-caelis">
             <div class="contenedor-lateral">
                 <button id="btnDesplegar" class="btn-lateral">Datos:</button>
@@ -71,7 +64,7 @@
                     <img id="caelisPerfil" src="img/Caelis.png" alt="Caelis Skybrand">
                 </div>
             </div>
-        <div id="musicControls">
+        <div id="musicControls" class="music-player">
             <select id="playlistSelect" title="Seleccionar canción">
                 <option value="">🎬 Intro Record Keeper</option>
                 <option value="">⚔️ Música de pelea 1</option>

@@ -11,44 +11,37 @@
 <link rel="stylesheet" href="responsive.css">
     </head>
     <body class="nacho-bg">
-        <nav class="navbar">
-            <div class="menu-wrapper">
-                <div class="menu-icon">
-                    <button id="menuBtn">☰</button>
-                        <ul id="navOptions" class="menu.transition">
-                            <button id="closeMenu">✖</button>
-                            <li><a href="index.html">Inicio</a></li>
-                                <li class="has-submenu">
-                                    <a href="#personajes">Personajes</a>
-                                        <ul class="submenu">
-                                            <li><img src="img\iconoFury.png" alt="Nacho D Castro" class="pfp-img"><a href="nachodcastro.html">Nacho D Castro</a></li>
-                                            <li><img src="img\iconoMauri.png" alt="Gerónimo Splinter" class="pfp-img"><a href="geronimosplinter.html">Gerónimo Splinter</a></li>
-                                            <li><img src="img\iconoAgus.png" alt="Caelis Skybrand" class="pfp-img"><a href="caelisskybrand.html">Caelis Skybrand</a></li>
-                                            <li><img src="img\iconoAndy.png" alt="Arthur Kane" class="pfp-img"><a href="arthurkane.html">Arthur Kane</a></li>
-                                            <li><img src="img\iconoEmi.png" alt="Máximo Duque" class="pfp-img"><a href="maximoduque.html">Máximo Duque</a></li>
-                                            <li><img src="img\iconoPipi.png" alt="Pipi" class="pfp-img"><a href="pipi.html">Pipi</a></li>
-                                        </ul>
-                                </li>
-                            <li class="has-submenu">
-                                <a href="#fondos">Fondos</a>
-                                    <ul class="submenu">
-                                        <li><a href="#paisajes">Paisajes</a></li>
-                                        <li><a href="#pueblos">Pueblos</a></li>
-                                        <li><a href="#interiores">Interiores</a></li>
-                                    </ul>
-                            </li>
-                            <li class="has-submenu">
-                                <a href="#mapas">Mapas</a>
-                                    <ul class="submenu">
-                                        <li><a href="#Islas">Islas</a></li>
-                                        <li><a href="#Mapa mundial">Mapa mundial</a></li>
-                                        <li><a href="#Mapas del tesoro">Mapas del tesoro</a></li>
-                                    </ul>
-                            </li>
+        <div class="wrapper">
+            <nav class="navbar">
+                <div class="menu-wrapper">
+                    <div class="menu-icon">
+                <button id="menuBtn">☰</button>
+                <ul id="navOptions" class="menu transition nav-list">
+                    <button id="closeMenu">✖</button>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li class="has-submenu">
+                        <a href="#personajes">Personajes</a>
+                        <ul class="submenu">
+                            <li><img src="img\iconoFury.png" alt="Nacho D Castro" class="pfp-img"><a href="nachodcastro.html">Nacho D Castro</a></li>
+                            <li><img src="img\iconoMauri.png" alt="Gerónimo Splinter" class="pfp-img"><a href="geronimosplinter.html">Gerónimo Splinter</a></li>
+                            <li><img src="img\iconoAgus.png" alt="Caelis Skybrand" class="pfp-img"><a href="caelisskybrand.html">Caelis Skybrand</a></li>
+                            <li><img src="img\iconoAndy.png" alt="Arthur Kane" class="pfp-img"><a href="arthurkane.html">Arthur Kane</a></li>
+                            <li><img src="img\iconoEmi.png" alt="Máximo Duque" class="pfp-img"><a href="maximoduque.html">Máximo Duque</a></li>
+                            <li><img src="img\iconoPipi.png" alt="Pipi" class="pfp-img"><a href="pipi.html">Pipi</a></li>
                         </ul>
+                    </li>
+                     
+                    <li class="has-submenu">
+                        <a href="#mapas">Mapas</a>
+                        <ul class="submenu">
+                            <li><a href="#Islas">Islas</a></li>
+                            <li><a href="mapamundi.html">Mapa mundial</a></li>
+                             
+                        </ul>
+                    </li>
+                    </ul>
                 </div>
-            </div>
-        </nav>
+            </nav>
             <img src="img/nachoTitle.png" alt="Título Nacho" class="titulo-nacho">
             <div class="contenedor-lateral">
                 <button id="btnDesplegar" class="btn-lateral">Datos:</button>
@@ -65,13 +58,13 @@
                             Horas de choque brutal terminaron cuando Irugadora, en un gesto sobrehumano, casi partió en dos al joven espadachín y clavó la Masamune en su sien, dejando una cicatriz que le cruzaría el pecho como un rayo.<br>
                             <br>Entre cadáveres y relámpagos, la última advertencia de aquel traidor resonó: “Si sobrevives, te esperaré en el Nuevo Mundo.” Nacho despertó con vida de puro milagro, marcado por el dolor y el terror, y con la Masamune quebrada entre los dientes como recordatorio de ese encuentro.<br>
                             <br>Hoy, el guerrero empuña dos espadas normales en las manos y su tercera hoja, la legendaria Masamune, sostenida por sus dientes: su mango rojo y dorado un tributo al dueño caído y al trauma que dejó. Aunque su orgullo lo impulsa, las noches de luna llena le traen pesadillas —la risa putrefacta de Irugadora sigue acechándolo— y su corazón late con un propósito tan claro como su sangre seca:<br> 
-                            <br>volver a enfrentarse al no‑muerto, reclamar su revancha y purgar el honor que aquel traidor le robó.
+                            <br>Volver a enfrentarse al no‑muerto, reclamar su revancha y purgar el honor que aquel traidor le robó.
                         </p>
                     </div>
                     <img id="nachoPerfil" src="img/Castro.jpg" alt="Nacho D. Castro">
                 </div>
             </div>
-        <div id="musicControls">
+        <div id="musicControls" class="music-player">
             <select id="playlistSelect" title="Seleccionar canción">
                 <option value="">🎬 Intro Record Keeper</option>
                 <option value="">⚔️ Música de pelea 1</option>

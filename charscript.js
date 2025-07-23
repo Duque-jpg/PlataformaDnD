@@ -18,8 +18,33 @@ document.addEventListener("DOMContentLoaded", () => {
   const nachoPerfil = document.getElementById("nachoPerfil");
   if (nachoPerfil) {
     const bioNacho = document.querySelector(".bio-nacho");
-    NachoPerfil.addEventListener("click", () => {
+    nachoPerfil.addEventListener("click", () => {
       bioNacho.classList.toggle("active");
     });
   }
+
+  const splinterPerfil = document.getElementById("splinterPerfil");
+  if (splinterPerfil) {
+    const bioSplinter = document.querySelector(".bio-splinter");
+    splinterPerfil.addEventListener("click", () => {
+      bioSplinter.classList.toggle("active");
+    });
+  }
+
+  const arthurPerfil = document.getElementById("arthurPerfil");
+  if (arthurPerfil) {
+    const bioArthur = document.querySelector(".bio-arthur");
+    arthurPerfil.addEventListener("click", () => {
+      bioArthur.classList.toggle("active");
+    });
+  }
+
+  const pipiPerfil = document.getElementById("pipiPerfil");
+  if (pipiPerfil) {
+    const bioPipi = document.querySelector(".bio-pipi");
+    pipiPerfil.addEventListener("click", () => {
+      bioPipi.classList.toggle("active");
+    });
+  }
+  
 });
