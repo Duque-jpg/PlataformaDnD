@@ -1338,33 +1338,3 @@ body::before {
   white-space: nowrap;
 }
 
-#galeria-container {
-  position: fixed;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 10px;
-  background: rgba(10, 10, 10, 0.9);
-  padding: 15px;
-  border-radius: 10px;
-  z-index: 20;
-  transition: opacity 0.3s ease;
-  box-shadow: 0 0 20px #000;
-}
-
-#galeria-container img {
-  width: 120px;
-  height: auto;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: transform 0.2s ease;
-}
-
-#galeria-container img:hover {
-  transform: scale(1.1);
-}
-
-.galeria-oculta {
-  display: none;
-} 
