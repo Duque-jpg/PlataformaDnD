@@ -1386,27 +1386,41 @@ body::before {
 }
 
 .bazar {
-  position: relative;
-  width: 1000px; /* lo que mida tu fondo */
-  height: auto;
+  position: fixed;
+    top: 1vh;
+    left: 0;
+    width: 100vw;     /* todo el ancho de la ventana */
+    height: 97vh;    /* todo el alto de la ventana */
+    overflow: hidden;
+    cursor: grab;
+    border: 2px solid #333;
+    border-radius: 10px;
 }
 
 .fondo {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
+  height: 100%;
+  object-fit: cover;
   display: block;
 }
 
 .interactivo {
   position: absolute;
-  top: 220px; /* ajustá esto según tu imagen */
-  left: 300px;
-  width: 200px; /* según el tamaño real del recorte */
-  transition: transform 0.3s ease, filter 0.3s ease;
+  bottom: -10.5%; /* Ajustá esto */
+  right: 0.3%; /* Ajustá esto */
+  width: 47%; /* o el tamaño que quede bien con respecto al fondo */
   cursor: pointer;
-  z-index: 10;
+  transition: transform 0.3s ease, filter 0.3s ease;
 }
 
 .interactivo:hover {
   transform: scale(1.05);
-  filter: brightness(1.3) drop-shadow(0 0 10px yellow);
+  filter: brightness(1.2) drop-shadow(0 0 10px yellow);
 }
+
+html #bazarin {
+      overflow: hidden;
+    }
