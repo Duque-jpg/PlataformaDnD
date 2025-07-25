@@ -46,13 +46,19 @@
                 <img src="img/mapamundibg.jpg" id="mapaBase" alt="Mapa">
 
                 <!-- Hotspots encima del mapa -->
-                <div class="hotspot" style="top: 13.5%; left: 59.5%;" data-tooltip="Cozia" data-imagenes="img1.jpg,img2.jpg,img3.jpg,img4.jpg">📍</div>
+                <div class="hotspot" style="top: 13.5%; left: 59.5%;" data-tooltip="Cozia" data-imagenes="img/pueblito.png,img/pueblito2.png,img3.jpg,img4.jpg" data-texto="Una isla misteriosa con secretos antiguos.">📍</div>
                 <div class="hotspot" style="top: 18.5%; left: 61.7%;" data-tooltip="Arlong Park" data-imagenes="img1.jpg,img2.jpg,img3.jpg,img4.jpg">📍</div>
             </div>
         </div>
         <div id="tooltip" class="tooltip"></div>
-        <div id="galeria-container" class="galeria-oculta"></div>
-        <button id="cerrar-galeria" class="galeria-oculta">✖</button>
+        <div id="galeria-container" class="galeria-oculta">
+            <div id="galeria-contenido">
+                <img class="galeria-img" id="galeria-img1" src="" alt="">
+                <img class="galeria-img" id="galeria-img2" src="" alt="">
+                <p id="galeria-texto"></p>
+                <button id="cerrar-galeria">✖</button>
+            </div>
+        </div>
         <div id="musicControls" class="music-player">
             <select id="playlistSelect" title="Seleccionar canción">
                 <option value="">🎬 Intro Record Keeper</option>
