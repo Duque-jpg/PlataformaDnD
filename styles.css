@@ -1321,7 +1321,7 @@ body::before {
 }
 
 .hotspot:hover {
-  transform: scale(1.5);
+  filter: drop-shadow(0 0 12px #03024d);
 }
 
 .tooltip {
@@ -1385,6 +1385,45 @@ body::before {
   cursor: pointer;
 }
 
+.popup {
+  display: none; /* Oculto por defecto */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7); /* Fondo semitransparente */
+  z-index: 999;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Contenedor de la imagen */
+.popup-content {
+  position: relative;
+}
+
+.popup-content img {
+  max-width: 90vw;
+  max-height: 90vh;
+  border: 1px solid #fff;
+  border-radius: 10px;
+}
+
+/* Botón de cerrar */
+.close-btn {
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  background: #fff;
+  color: #000;
+  font-size: 30px;
+  font-weight: bold;
+  border-radius: 50%;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
 .bazar {
   position: fixed;
     top: 1vh;
@@ -1392,7 +1431,6 @@ body::before {
     width: 100vw;     /* todo el ancho de la ventana */
     height: 97vh;    /* todo el alto de la ventana */
     overflow: hidden;
-    cursor: grab;
     border: 2px solid #333;
     border-radius: 10px;
 }
@@ -1424,3 +1462,85 @@ body::before {
 html #bazarin {
       overflow: hidden;
     }
+
+.bar {
+  position: fixed;
+    top: 1vh;
+    left: 0;
+    width: 100vw;     /* todo el ancho de la ventana */
+    height: 97vh;    /* todo el alto de la ventana */
+    overflow: hidden;
+    border: 2px solid #333;
+    border-radius: 10px;
+}
+
+.fondo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+#barin .interactivo {
+  position: absolute;
+  top: -3.5%; /* Ajustá esto */
+  left: 7.65%; /* Ajustá esto */
+  width: 64%; /* o el tamaño que quede bien con respecto al fondo */
+  cursor: pointer;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.interactivo:hover {
+  transform: scale(1.05);
+  filter: brightness(1.2) drop-shadow(0 0 10px yellow);
+}
+
+html #barin {
+      overflow: hidden;
+    }
+
+.astillero {
+  position: fixed;
+    top: 1vh;
+    left: 0;
+    width: 100vw;     /* todo el ancho de la ventana */
+    height: 97vh;    /* todo el alto de la ventana */
+    overflow: hidden;
+    border: 2px solid #333;
+    border-radius: 10px;
+}
+
+.fondo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+#astillerin .interactivo {
+  position: absolute;
+  bottom: -6.5%; /* Ajustá esto */
+  right: 6.65%; /* Ajustá esto */
+  width: 47%; /* o el tamaño que quede bien con respecto al fondo */
+  cursor: pointer;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.interactivo:hover {
+  transform: scale(1.05);
+  filter: brightness(1.2) drop-shadow(0 0 10px yellow);
+}
+
+html #astillerin {
+      overflow: hidden;
+    }
+
+.hotspot .mapazoomeado {
+  width: 47%; /* o el tamaño que quede bien con respecto al fondo */
+}

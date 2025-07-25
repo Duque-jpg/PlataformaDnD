@@ -8,9 +8,9 @@
         <link rel="icon" type="image/png" sizes="64x64" href="img\logo OP dnd.png">
         <link rel="icon" type="image/png" sizes="128x128" href="img\logo OP dnd.png">
         <link rel="stylesheet" href="styles.css">
-<link rel="stylesheet" href="responsive.css">
+        <link rel="stylesheet" href="responsive.css">
     </head>
-    <body class="caelis-bg">
+    <body id="astillerin">
         <div class="wrapper">
             <nav class="navbar">
                 <div class="menu-wrapper">
@@ -43,28 +43,19 @@
                     </ul>
                 </div>
             </nav>
-            <img src="img/caelisTitle.png" alt="Título Caelis" class="titulo-caelis">
-            <div class="contenedor-lateral">
-                <button id="btnDesplegar" class="btn-lateral">Datos:</button>
-                    <div id="textoDesplegado" class="texto-oculto">
-                        <p>Este es el texto que se muestra al desplegar.</p>
-                    </div>
-                </div>
-                <div class="perfil-caelis">
-                    <div class="bio-caelis">
-                        <p>
-                            Caelis nació más allá de las nubes, en Birka, la isla celestial donde el autoproclamado dios Enel prohibía todo contacto con la Tierra. Hijo de Alya, una skypieana, y Zephyr, un marine terrícola, su llegada fue un acto de amor clandestino… y de traición. Cuando Enel descubrió su existencia, ordenó matar a Alya; Zephyr logró huir con Caelis, pero su madre cayó bajo el relámpago divino.<br>
-                            <br>Creció como soldado errante junto a su padre, entrenándose en artes marciales y supervivencia; cada derrota templaba su cuerpo y su espíritu. <br>
-                            <br>A los doce años dominaba el combate cuerpo a cuerpo, pero en la ceremonia de ascenso de Zephyr, el almirante Akainu lo delató como hijo de una “rebelde” de Birka.<br>
-                            Zephyr fue arrestado y encarcelado en Impel Down, y Caelis escapó, huérfano y sediento de justicia.<br>
-                            <br>Durante siete años peleó en arenas clandestinas, forjando su fuerza en sangre y soledad, ocultando su origen celeste.<br>
-                            <br>Ahora, con diecinueve años y el corazón endurecido, su destino está claro: vengar a su madre, derrocar al traidor Akainu y liberar a su padre de la prisión más temida del mundo...<br>
-                            <br><strong>¡Impel Down!</strong>
-                        </p>
-                    </div>
-                    <img id="caelisPerfil" src="img/Caelis.png" alt="Caelis Skybrand">
-                </div>
+        </div>
+        
+        <div class="astillero">
+            <img src="img/astillero.png" class="fondo">
+            <img src="img/mostraastillero.png" class="interactivo">
+        </div>
+        <div id="popup" class="popup">
+            <div class="popup-content">
+                <span class="close-btn">&times;</span>
+                <img src="img/listaAstillero.png" alt="Popup" />
             </div>
+        </div>
+
         <div id="musicControls" class="music-player">
             <select id="playlistSelect" title="Seleccionar canción">
                 <option value="">🎬 Intro Record Keeper</option>
@@ -111,6 +102,7 @@
         </div>
         <script src="music.js"></script>
         <script src="script.js"></script>
-        <script src="charscript.js"></script>
+        <script src="items.js"></script>
+        </div>
     </body>
 </html>
