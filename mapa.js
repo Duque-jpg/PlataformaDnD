@@ -19,6 +19,23 @@ hotspots.forEach(hotspot => {
   hotspot.addEventListener('mouseleave', () => {
     tooltip.style.display = 'none';
   });
+
+  hotspot.addEventListener('click', () => {
+  const imagenes = hotspot.getAttribute('data-imagenes');
+  const texto = hotspot.getAttribute('data-texto');
+
+  if (!imagenes) return;
+
+  const lista = imagenes.split(',');
+  document.getElementById('galeria-img1').src = lista[0]?.trim() || '';
+  document.getElementById('galeria-img2').src = lista[1]?.trim() || '';
+  document.getElementById('galeria-texto').textContent = texto || '';
+  document.getElementById('galeria-container').style.display = 'flex';
+  });
+
+  document.getElementById('cerrar-galeria').addEventListener('click', () => {
+  document.getElementById('galeria-container').style.display = 'none';
+  });
 });
 
   const cont = document.getElementById("mapaContainer");
