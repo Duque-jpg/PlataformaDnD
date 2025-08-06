@@ -10,7 +10,7 @@
         <link rel="stylesheet" href="styles.css">
         <link rel="stylesheet" href="responsive.css">
     </head>
-    <body id="barin">
+    <body id="mapita">
         <div class="wrapper">
             <nav class="navbar">
                 <div class="menu-wrapper">
@@ -44,18 +44,27 @@
                 </div>
             </nav>
         </div>
-        
-        <div class="bar">
-            <img src="img/bar.png" class="fondo">
-            <img src="img/mostrabar.png" class="interactivo">
-        </div>
-        <div id="popup" class="popup">
-            <div class="popup-content">
-                <span class="close-btn">&times;</span>
-                <img src="img/listaBar.png" alt="Popup" />
+        <div id="mapaContainer">
+            <div id="mapaZoom">
+                <img src="img/Cozia.jpg" id="mapaBase" alt="Mapa">
+
+                <div class="hotspot" style="bottom: 39%; left: 32.5%;" data-tooltip="Cozia" data-imagenes="img/coziaciudad.jpg">📍</div>
+                <div class="hotspot" style="bottom: 30%; left: 45%;" data-tooltip="Villa Marea" data-imagenes="img/villamarea.jpg">📍</div>
+                <div class="hotspot" style="bottom: 41%; left: 73%;" data-tooltip="Byco" data-imagenes="img/byco.jpg">📍</div>
+                <div class="hotspot" style="bottom: 37%; left: 58.3%;" data-tooltip="Gelditus" data-imagenes="img/gelditus.jpg">📍</div>
+                <div class="hotspot" style="bottom: 45%; left: 47.2%;" data-tooltip="Pueblo Ronquido" data-imagenes="img/puebloronquido.jpg">📍</div>
+                <div class="hotspot" style="bottom: 37%; left: 88.3%;" data-tooltip="Trefico" data-imagenes="img/trefico.jpg">📍</div>
             </div>
         </div>
-
+        <div id="tooltip" class="tooltip"></div>
+        <div id="galeria-container" class="galeria-oculta">
+            <div id="galeria-contenido">
+                <img class="galeria-img" id="galeria-img1" src="" alt="">
+                <img class="galeria-img" id="galeria-img2" src="" alt="">
+                <p id="galeria-texto"></p>
+                <button id="cerrar-galeria">✖</button>
+            </div>
+        </div>
         <div id="musicControls" class="music-player">
             <select id="playlistSelect" title="Seleccionar canción">
                 <option value="">🎬 Intro Record Keeper</option>
@@ -102,7 +111,7 @@
         </div>
         <script src="music.js"></script>
         <script src="script.js"></script>
-        <script src="items.js"></script>
+        <script src="mapa.js"></script>
         </div>
     </body>
 </html>
