@@ -51,7 +51,6 @@ body {
   z-index: 10;
 }
 
-/* 4) Hover activo siempre: agranda un poquito más sobre el zoom 2→2.1 */
 #logoPrincipal:hover {
   filter: drop-shadow(0 0 25px #ffcc00) !important;
 }
@@ -1293,10 +1292,6 @@ body::before {
   border: none;         /* quita el borde */
   transition: transform .2s ease;
   z-index: 5;
-}
-
-.hotspot img {
-  pointer-events: auto;
 }
 
 .hotspot:hover {
