@@ -31,9 +31,7 @@ body {
   max-width: 800px;
 }
 
-.contenedor-video video {
-  width: 100%;
-  height: auto;
+.contenedor-video iframe {
   border: 2px solid red; /* Opcional: para ver el borde del video */
   border-radius: 10px;
   z-index: -99999;
